@@ -3,7 +3,7 @@ import Features from "@/components/sections/home/features";
 import Hero from "@/components/sections/home/hero";
 import SEO from "@/components/seo";
 import { appConfig } from "@/utils/app-config";
-import { lazy, Suspense, useRef } from "react";
+import { lazy, Suspense } from "react";
 
 // Lazy load below-the-fold components for code splitting
 const Blog = lazy(() => import("@/components/sections/home/blog"));
@@ -15,7 +15,6 @@ const SecurityCompliance = lazy(() => import("@/components/sections/home/securit
 const Testimonials = lazy(() => import("@/components/sections/home/testimonials"));
 
 const Home = () => {
-  const heroRef = useRef<HTMLElement>(null);
   const metaTitle = "Opportunity 4 All Talents | African Football Talent Platform";
   const metaDescription = "Connecting emerging African football talent with global visibility, scouts, clubs, sponsors, and opportunity.";
   const jsonLd = {
@@ -55,8 +54,8 @@ const Home = () => {
         jsonLd={jsonLd}
       />
       <Layout>
-        <Hero heroRef={heroRef} />
-        <Features heroRef={heroRef} />
+        <Hero />
+        <Features />
         <Suspense fallback={null}>
           <CoreFeatures />
         </Suspense>

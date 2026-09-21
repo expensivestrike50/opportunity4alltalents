@@ -94,7 +94,7 @@ const PartnershipsCompliance = () => {
           className="p-[27px] bg-revio-light-green flex flex-col md:flex-row items-center justify-center gap-3"
         >
           <p className="text-foreground text-lg text-center md:text-left max-w-[400px] md:max-w-full">
-            ⚡ Partnership activation rooted in real football stories, credible access, and shared impact.
+            Partnership activation rooted in real football stories, credible access, and shared impact.
           </p>
           <Button className="bg-foreground text-background hover:bg-foreground/90" asChild>
             <Link to="/contact">

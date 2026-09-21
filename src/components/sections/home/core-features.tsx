@@ -1,4 +1,5 @@
 import trainingWide from "@/assets/sports/training-wide.jpg";
+const stadiumCrowd = "https://images.unsplash.com/photo-1569531955323-33c6b2dca44b?q=80&w=1200&auto=format&fit=crop";
 import grassrootsMatch from "@/assets/sports/grassroots-match.jpg";
 import matchPrep from "@/assets/sports/match-prep.jpg";
 import playerPortrait from "@/assets/sports/player-portrait.jpg";
@@ -165,19 +166,18 @@ const CoreFeatures = () => {
               delay={0.6}
               className="lg:col-span-7 col-span-1"
             >
-              <Card className="h-full">
-                <CardHeader className="flex justify-center items-center md:py-16 py-4 md:px-8 px-4">
-                  <img
-                    src={trainingWide}
-                    alt="Scout reviewing football talent"
-                    className="w-full h-full object-cover max-w-[298px]"
-                    loading="lazy" />
-                </CardHeader>
-                <CardContent className="mt-6 p-2 max-w-[420px]">
-                  <h3 className="h5 mb-2">
+              <Card className="h-full min-h-[380px] p-0 overflow-hidden relative">
+                <img
+                  src={stadiumCrowd}
+                  alt="Packed football stadium at sunset"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" aria-hidden="true" />
+                <CardContent className="relative z-10 h-full flex flex-col justify-end p-6 md:p-8 max-w-[420px]">
+                  <h3 className="h5 mb-2 text-white">
                     Grassroots Access
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-white/80 leading-relaxed">
                     Support equipment, video capture, scouting showcases, and development events where talent begins.
                   </p>
                 </CardContent>
