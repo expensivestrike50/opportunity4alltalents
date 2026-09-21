@@ -4,22 +4,23 @@ import actionSquare from "@/assets/sports/action-square.jpg";
 import Container from "@/components/container";
 import { Card, CardContent } from "@/components/ui/card";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
+import { publicUrl } from "@/lib/utils";
 
 const chartData = [
   {
-    icon: "/images/icons/shield-green.svg",
+    icon: publicUrl("/images/icons/shield-green.svg"),
     title: "Player Visibility Profiles",
     description: "Present emerging players through focused profiles, footage, stories, and performance context.",
     image: matchPrep
   },
   {
-    icon: "/images/icons/timeline.svg",
+    icon: publicUrl("/images/icons/timeline.svg"),
     title: "Scouting & Club Connections",
     description: "Make relevant talent easier for scouts, academies, and clubs to discover and assess.",
     image: scouting
   },
   {
-    icon: "/images/icons/growth.svg",
+    icon: publicUrl("/images/icons/growth.svg"),
     title: "Partnership Activation",
     description: "Turn sponsorship into authentic stories, football access, and measurable brand value.",
     image: actionSquare

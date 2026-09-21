@@ -5,6 +5,7 @@ import matchPrep from "@/assets/sports/match-prep.jpg";
 import scouting from "@/assets/sports/scouting.jpg";
 import teamCommunity from "@/assets/sports/team-community.jpg";
 import trainingWide from "@/assets/sports/training-wide.jpg";
+import { publicUrl } from "@/lib/utils";
 
 /**
  * Static seed data for the /demo/* marketing routes.
@@ -25,7 +26,7 @@ export const demoProfile: DemoProfile = {
   last_name: "Okafor",
   email: "stories@opportunity4alltalents.com",
   phone: "+1 (415) 555-0142",
-  avatar_url: "/images/homepage/avatar-1.png",
+  avatar_url: publicUrl("/images/homepage/avatar-1.png"),
 };
 
 // Bundled local photography (src/assets/sports).
@@ -58,11 +59,11 @@ const ONLINE_IMAGES = [
 const FEATURED_IMAGES = [...LOCAL_IMAGES, ...ONLINE_IMAGES];
 
 const AUTHOR_AVATARS: Record<string, string> = {
-  "Amara Okafor": "/images/homepage/avatar-1.png",
-  "Daniel Reyes": "/images/homepage/avatar-2.png",
-  "Priya Raman": "/images/homepage/avatar-3.png",
-  "Sofia Lindqvist": "/images/homepage/avatar-4.png",
-  "Marcus Chen": "/images/homepage/avatar-1.png",
+  "Amara Okafor": publicUrl("/images/homepage/avatar-1.png"),
+  "Daniel Reyes": publicUrl("/images/homepage/avatar-2.png"),
+  "Priya Raman": publicUrl("/images/homepage/avatar-3.png"),
+  "Sofia Lindqvist": publicUrl("/images/homepage/avatar-4.png"),
+  "Marcus Chen": publicUrl("/images/homepage/avatar-1.png"),
 };
 
 // Local word-count estimate so read times actually match the content length
@@ -444,7 +445,7 @@ export const demoBlogPosts: BlogPost[] = seeds.map((seed, index) => ({
   slug: slugify(seed.title),
   category: seed.category,
   author: seed.author,
-  author_image: AUTHOR_AVATARS[seed.author] ?? "/images/homepage/avatar-1.png",
+  author_image: AUTHOR_AVATARS[seed.author] ?? publicUrl("/images/homepage/avatar-1.png"),
   status: seed.status,
   date: seed.date,
   read_time: estimateReadTime(seed.content),

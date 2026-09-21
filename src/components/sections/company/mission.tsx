@@ -4,29 +4,30 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { ArrowRight } from "lucide-react";
+import { publicUrl } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
 const coreValues = [
     {
-        icon: "/images/icons/wallet.svg",
+        icon: publicUrl("/images/icons/wallet.svg"),
         title: "Finding hidden gems",
         description: "Finding emerging players and helping their ability reach the right audience.",
         iconColor: "text-primary"
     },
     {
-        icon: "/images/icons/shield.svg",
+        icon: publicUrl("/images/icons/shield.svg"),
         title: "Protecting player stories",
         description: "Sharing talent responsibly, with context, consent, and credibility.",
         iconColor: "text-neutral-700"
     },
     {
-        icon: "/images/icons/click.svg",
+        icon: publicUrl("/images/icons/click.svg"),
         title: "Building visibility",
         description: "Creating useful profiles and stories for scouts, clubs, and partners.",
         iconColor: "text-green-600"
     },
     {
-        icon: "/images/icons/check.svg",
+        icon: publicUrl("/images/icons/check.svg"),
         title: "Creating opportunity",
         description: "Connecting football potential with pathways that can move careers forward.",
         iconColor: "text-primary"

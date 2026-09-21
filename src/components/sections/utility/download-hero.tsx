@@ -1,6 +1,7 @@
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
+import { publicUrl } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
 const DownloadHero = () => {
@@ -18,13 +19,13 @@ const DownloadHero = () => {
                     <div className="flex justify-center gap-4">
                         <Button asChild>
                             <Link to="/contact">
-                                <img src="/images/common/revio-signup.svg" alt="Apple" loading="lazy"/>
+                                <img src={publicUrl("/images/common/revio-signup.svg")} alt="Apple" loading="lazy"/>
                                 Share an Opportunity
                             </Link>
                         </Button>
                         <Button asChild variant="outline" className="text-white">
                             <Link to="/contact">
-                                <img src="/images/common/revio-download.svg" alt="Apple" loading="lazy"/>
+                                <img src={publicUrl("/images/common/revio-download.svg")} alt="Apple" loading="lazy"/>
                                 Become a Partner
                             </Link>
                         </Button>

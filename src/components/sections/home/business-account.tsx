@@ -9,6 +9,7 @@ import { StaggerContainer } from "@/components/ui/motion/stagger";
 import { AnimatePresence, motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { ArrowRight } from "lucide-react";
+import { publicUrl } from "@/lib/utils";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -17,7 +18,7 @@ const BusinessAccount = () => {
 
   const tabs = [
     {
-      icon: "/images/icons/bank.svg",
+      icon: publicUrl("/images/icons/bank.svg"),
       title: "Product × Player",
       badge: "Authentic Activation",
       heading: "Put your product inside a real player story",
@@ -26,7 +27,7 @@ const BusinessAccount = () => {
       link: "/contact",
     },
     {
-      icon: "/images/icons/growth-arrow.svg",
+      icon: publicUrl("/images/icons/growth-arrow.svg"),
       title: "Player of the Month",
       badge: "Branded Recognition",
       heading: "Celebrate performance with purpose",
@@ -35,7 +36,7 @@ const BusinessAccount = () => {
       link: "/contact",
     },
     {
-      icon: "/images/icons/globe.svg",
+      icon: publicUrl("/images/icons/globe.svg"),
       title: "Football Education",
       badge: "Player & Parent Content",
       heading: "Prepare talent for the pathway ahead",

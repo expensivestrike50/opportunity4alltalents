@@ -4,195 +4,196 @@ import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { ArrowRight } from "lucide-react";
+import { publicUrl } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 const teamMembers = [
     {
         id: 1,
-        avatar: "/images/company/team/team-1.png",
+        avatar: publicUrl("/images/company/team/team-1.png"),
         name: "James Whitaker",
         role: "Parent",
         quote: "O4AT kept us informed at every step, from the first trial invite to the final academy offer. That mattered more than we expected."
     },
     {
         id: 2,
-        avatar: "/images/company/team/team-2.png",
+        avatar: publicUrl("/images/company/team/team-2.png"),
         name: "Emily Rodriguez",
         role: "Player",
         quote: "I'd been playing on the same pitch for three years with nobody watching. Within a season of working with O4AT, I had two academy trials."
     },
     {
         id: 3,
-        avatar: "/images/company/team/team-3.png",
+        avatar: publicUrl("/images/company/team/team-3.png"),
         name: "David Kim",
         role: "Youth Coach",
         quote: "I finally have a simple way to document my players properly instead of just hoping someone notices them."
     },
     {
         id: 4,
-        avatar: "/images/company/team/team-4.png",
+        avatar: publicUrl("/images/company/team/team-4.png"),
         name: "Lisa Anderson",
         role: "Club Recruitment Scout",
         quote: "The match reports O4AT sends over are honest. That's rarer than it should be, and it's why we keep responding to their emails."
     },
     {
         id: 5,
-        avatar: "/images/company/team/team-5.png",
+        avatar: publicUrl("/images/company/team/team-5.png"),
         name: "Robert Taylor",
         role: "Football Agent",
         quote: "Before I take on a young player, I want a credible history, not a highlight reel. O4AT profiles give me exactly that."
     },
     {
         id: 6,
-        avatar: "/images/company/team/team-6.png",
+        avatar: publicUrl("/images/company/team/team-6.png"),
         name: "Maria Garcia",
         role: "Parent",
         quote: "Nobody explained the trial process to us the way O4AT did. We knew exactly what to expect and what to ask."
     },
     {
         id: 7,
-        avatar: "/images/company/team/team-7.png",
+        avatar: publicUrl("/images/company/team/team-7.png"),
         name: "John Williams",
         role: "Academy Director",
         quote: "Every introduction we've had from O4AT has come with real context. That saves us weeks of back and forth."
     },
     {
         id: 8,
-        avatar: "/images/company/team/team-8.png",
+        avatar: publicUrl("/images/company/team/team-8.png"),
         name: "Jennifer Brown",
         role: "Sponsor",
         quote: "We've sponsored plenty of teams. This is the first one where we can point to an actual player's story we helped fund."
     },
     {
         id: 9,
-        avatar: "/images/company/team/team-9.png",
+        avatar: publicUrl("/images/company/team/team-9.png"),
         name: "Christopher Lee",
         role: "Player",
         quote: "They filmed my matches for months before anything happened. Then one email changed everything."
     },
     {
         id: 10,
-        avatar: "/images/company/team/team-10.png",
+        avatar: publicUrl("/images/company/team/team-10.png"),
         name: "Amanda White",
         role: "Parent",
         quote: "As a parent, the hardest part is knowing who to trust. O4AT was the first group that felt genuinely on our side."
     },
     {
         id: 11,
-        avatar: "/images/company/team/team-11.png",
+        avatar: publicUrl("/images/company/team/team-11.png"),
         name: "Kevin Harris",
         role: "Grassroots Coach",
         quote: "I've sent dozens of players' footage to O4AT. They actually watch it, and they actually reply."
     },
     {
         id: 12,
-        avatar: "/images/company/team/team-12.png",
+        avatar: publicUrl("/images/company/team/team-12.png"),
         name: "Michelle Clark",
         role: "Club Recruitment Manager",
         quote: "O4AT sends us fewer players than most scouts, but a higher share of them are worth a trial."
     },
     {
         id: 13,
-        avatar: "/images/company/team/team-13.png",
+        avatar: publicUrl("/images/company/team/team-13.png"),
         name: "Brian Lewis",
         role: "Player",
         quote: "I didn't think anyone outside my town had seen me play. Turns out a scout had, because of O4AT."
     },
     {
         id: 14,
-        avatar: "/images/company/team/team-14.png",
+        avatar: publicUrl("/images/company/team/team-14.png"),
         name: "Stephanie Walker",
         role: "Parent",
         quote: "They never once oversold what my son's chances actually were. That honesty is why we trusted them."
     },
     {
         id: 15,
-        avatar: "/images/company/team/team-15.png",
+        avatar: publicUrl("/images/company/team/team-15.png"),
         name: "Jason Hall",
         role: "Academy Coach",
         quote: "The players O4AT sends us usually already know how to carry themselves in a trial. That's not an accident."
     },
     {
         id: 16,
-        avatar: "/images/company/team/team-16.png",
+        avatar: publicUrl("/images/company/team/team-16.png"),
         name: "Lauren Allen",
         role: "Sponsor",
         quote: "Our brand went from being a name on a banner to being part of an actual initiative supporting players."
     },
     {
         id: 17,
-        avatar: "/images/company/team/team-17.png",
+        avatar: publicUrl("/images/company/team/team-17.png"),
         name: "Eric Young",
         role: "Club Scout",
         quote: "Full match footage, not a highlight reel. It's a small thing, but it's why I trust what O4AT sends."
     },
     {
         id: 18,
-        avatar: "/images/company/team/team-18.png",
+        avatar: publicUrl("/images/company/team/team-18.png"),
         name: "Nicole Jackson",
         role: "Player",
         quote: "They treated my story like it mattered before any club had said yes to anything."
     },
     {
         id: 19,
-        avatar: "/images/company/team/team-19.png",
+        avatar: publicUrl("/images/company/team/team-19.png"),
         name: "Ryan Thompson",
         role: "Youth Coach",
         quote: "One tip I gave them turned into a trial for one of my players three months later."
     },
     {
         id: 20,
-        avatar: "/images/company/team/team-20.png",
+        avatar: publicUrl("/images/company/team/team-20.png"),
         name: "Ashley Moore",
         role: "Parent",
         quote: "We had a hundred questions before our daughter's first trial. O4AT answered all of them, twice."
     },
     {
         id: 21,
-        avatar: "/images/company/team/team-21.png",
+        avatar: publicUrl("/images/company/team/team-21.png"),
         name: "Andrew Davis",
         role: "Football Agent",
         quote: "Working across borders is messy. O4AT's paperwork and documentation made a transfer that should have taken months take weeks."
     },
     {
         id: 22,
-        avatar: "/images/company/team/team-22.png",
+        avatar: publicUrl("/images/company/team/team-22.png"),
         name: "Olivia Martinez",
         role: "Sponsor",
         quote: "They turned our sponsorship into a story our own team actually talks about internally."
     },
     {
         id: 23,
-        avatar: "/images/company/team/team-23.png",
+        avatar: publicUrl("/images/company/team/team-23.png"),
         name: "William Lee",
         role: "Club Director",
         quote: "We've signed two players through O4AT introductions. Both are still with us."
     },
     {
         id: 24,
-        avatar: "/images/company/team/team-24.png",
+        avatar: publicUrl("/images/company/team/team-24.png"),
         name: "Sophia Chen",
         role: "Player",
         quote: "The support didn't stop after I signed. They checked in for months after."
     },
     {
         id: 25,
-        avatar: "/images/company/team/team-25.png",
+        avatar: publicUrl("/images/company/team/team-25.png"),
         name: "Daniel Osei",
         role: "Grassroots Coach",
         quote: "O4AT is one of the only groups that actually shows up to the pitches nobody else visits."
     },
     {
         id: 26,
-        avatar: "/images/company/team/team-26.png",
+        avatar: publicUrl("/images/company/team/team-26.png"),
         name: "Grace Mensah",
         role: "Parent",
         quote: "They spoke to my son directly, not just to me. He felt respected, not just recruited."
     },
     {
         id: 27,
-        avatar: "/images/company/team/team-27.png",
+        avatar: publicUrl("/images/company/team/team-27.png"),
         name: "Victor Odhiambo",
         role: "Youth Coach",
         quote: "I've worked with a few scouting groups. O4AT is the only one that follows up months later to see how the player is doing."

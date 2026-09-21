@@ -1,6 +1,7 @@
 import Container from "@/components/container";
 import NewsletterForm from "@/components/newsletter-form";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
+import { publicUrl } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import BrandLogo from "@/components/brand-logo";
 
@@ -56,7 +57,7 @@ const Footer = () => {
     <footer className="relative bg-black text-white pt-36 pb-8 overflow-hidden">
       {/* Grid Pattern Background */}
       <div className="absolute bottom-0 left-0 pointer-events-none w-[533px] h-[601px] z-10">
-        <img src="/images/common/footer-pattern.svg" alt="pattern" />
+        <img src={publicUrl("/images/common/footer-pattern.svg")} alt="pattern" />
       </div>
 
       <Container className="relative z-20">
