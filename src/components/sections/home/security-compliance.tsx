@@ -29,7 +29,7 @@ const PartnershipsCompliance = () => {
       <Container className="md:space-y-10 xl:space-y-2xl space-y-8">
         {/* Section Title */}
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between md:gap-8 gap-4">
-          <div className="flex-1 max-w-[683px]">
+          <div className="flex-1">
             <AnimateOnView
               once
               blur
@@ -44,7 +44,7 @@ const PartnershipsCompliance = () => {
               once
               blur
               delay={0.1}
-              className="h2"
+              className="h2 whitespace-nowrap max-sm:text-[24px]"
             >
               Partnerships & Compliance
             </AnimateOnView>
