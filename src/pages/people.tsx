@@ -1,7 +1,6 @@
 import Container from "@/components/container";
 import Layout from "@/components/layout";
 import SEO from "@/components/seo";
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
@@ -54,17 +53,6 @@ const People = () => {
         {/* Hero */}
         <section className="bg-black banner-top-padding md:pb-20 xl:pb-24 pb-12">
           <Container>
-            <StaggerContainer className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 md:gap-4 xl:gap-6 mb-4 md:mb-8">
-              <AnimateOnView once blur>
-                <Badge variant="color">Represented by O4AT</Badge>
-              </AnimateOnView>
-              <AnimateOnView once blur delay={0.1}>
-                <Badge variant="color">
-                  <span>Players from grassroots to academy football.</span>
-                </Badge>
-              </AnimateOnView>
-            </StaggerContainer>
-
             <AnimateOnView once blur className="text-center max-w-3xl mx-auto" delay={0.2}>
               <h1 className="h1 text-white">
                 The players we represent

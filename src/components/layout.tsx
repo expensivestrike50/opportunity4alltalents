@@ -5,6 +5,7 @@ import AdPopup from './ad-popup'
 import CTA from './sections/shared/cta'
 import Footer from './sections/shared/footer'
 import Navbar from './sections/shared/navbar'
+import SubscribePopup from './subscribe-popup'
 
 interface LayoutProps {
     children: React.ReactNode
@@ -31,6 +32,7 @@ const Layout = ({ children, className, ...props }: LayoutProps) => {
             <CTA />
             <Footer />
             <AdPopup />
+            <SubscribePopup />
         </main>
     )
 }

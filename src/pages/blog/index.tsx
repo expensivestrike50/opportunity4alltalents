@@ -1,6 +1,5 @@
 import Layout from "@/components/layout";
 import BlogList from "@/components/sections/blog/blog-list";
-import FeaturedBlog from "@/components/sections/blog/featured-blog";
 import BlogHero from "@/components/sections/blog/hero";
 import SEO from "@/components/seo";
 import { appConfig } from "@/utils/app-config";
@@ -25,7 +24,6 @@ const Blog = () => {
       />
       <Layout>
         <BlogHero />
-        <FeaturedBlog />
         <BlogList />
       </Layout>
     </>

@@ -32,12 +32,16 @@ const Investors = () => {
                     </AnimateOnView>
                 </div>
 
-                {/* Partners Grid */}
-                <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+                {/* Partners Grid: blurred preview until partners are announced */}
+                <div className="relative">
+                <StaggerContainer
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 blur-md select-none pointer-events-none"
+                    aria-hidden="true"
+                >
                     {partners.map((partner, index) => (
                         <AnimateOnView key={partner.slug} delay={0.1 + index * 0.05} className="h-full">
-                            <Link to={`/partners/${partner.slug}`} className="block h-full group">
-                                <Card className="h-full bg-white border border-neutral-200 rounded-2xl p-5 overflow-hidden group-hover:border-primary group-hover:shadow-lg transition-all">
+                            <div className="block h-full">
+                                <Card className="h-full bg-white border border-neutral-200 rounded-2xl p-5 overflow-hidden">
                                     <CardContent className="p-0 flex flex-col justify-between h-full gap-10">
                                         <div className="flex items-center justify-between gap-1.5">
                                             <span className="inline-flex min-w-0 items-center gap-1.5 rounded-full border border-neutral-200 py-1 pl-1 pr-3">
@@ -65,10 +69,22 @@ const Investors = () => {
                                         </div>
                                     </CardContent>
                                 </Card>
-                            </Link>
+                            </div>
                         </AnimateOnView>
                     ))}
                 </StaggerContainer>
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <AnimateOnView once delay={0.3} className="flex flex-col items-center gap-3 rounded-3xl bg-white/80 px-8 py-6 text-center shadow-[0_20px_60px_rgba(20,20,20,0.12)] backdrop-blur">
+                        <span className="rounded-full bg-primary px-4 py-1.5 text-sm font-medium text-primary-foreground">
+                            Coming soon
+                        </span>
+                        <p className="max-w-[300px] text-muted-foreground">
+                            Our founding partners will be announced here soon.
+                        </p>
+                    </AnimateOnView>
+                </div>
+                </div>
             </Container>
         </section>
     );

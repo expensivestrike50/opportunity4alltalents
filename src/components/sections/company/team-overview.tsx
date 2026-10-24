@@ -310,15 +310,15 @@ const TeamOverview = () => {
     return (
         <section className="md:pt-20 xl:pt-32 pt-12 md:pb-20 xl:pb-32 pb-12">
             <Container>
-                <StaggerContainer className="text-center max-w-xl mx-auto">
+                <StaggerContainer className="text-center max-w-4xl mx-auto">
                     <AnimateOnView blur>
                         <h2 className="h2 text-foreground mb-6">
-                            Trusted by players, families, and clubs across Africa
+                            Trusted by players, families,<br className="hidden sm:block" /> and clubs across Africa
                         </h2>
                     </AnimateOnView>
 
                     <AnimateOnView blur delay={0.1}>
-                        <p className="mb-8">
+                        <p className="mb-8 max-w-xl mx-auto">
                             Real feedback from the players, parents, coaches, clubs, and sponsors we've worked with along the pathway.
                         </p>
                     </AnimateOnView>

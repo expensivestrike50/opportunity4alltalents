@@ -35,13 +35,15 @@ const BlogDetailsContent = ({ post }: BlogDetailsContentProps) => {
     <section>
       {/* Featured Image Section */}
       <AnimateOnView once blur delay={0.3} className="">
-        <div className="max-w-[2000px] mx-auto w-full md:h-[691px] h-[300px] overflow-hidden">
-          <img
-            src={post.image}
-            alt={post.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <Container>
+          <div className="w-full aspect-[4/3] sm:aspect-[16/9] max-h-[720px] overflow-hidden rounded-2xl md:rounded-4xl">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-full object-cover object-[center_20%]"
+            />
+          </div>
+        </Container>
       </AnimateOnView>
       <Container className="flex flex-col lg:flex-row justify-between md:gap-10 gap-6 py-[60px]">
         {/* Main Content Column */}

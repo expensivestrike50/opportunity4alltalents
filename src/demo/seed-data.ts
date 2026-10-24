@@ -5,6 +5,13 @@ import matchPrep from "@/assets/sports/blog-cone-dribbling.jpg";
 import scouting from "@/assets/sports/blog-player-smiling.jpg";
 import teamCommunity from "@/assets/sports/blog-youth-huddle.jpg";
 import trainingWide from "@/assets/sports/blog-team-training.jpg";
+import worldCollege from "@/assets/sports/blog-world-college.jpg";
+import worldDuel from "@/assets/sports/blog-world-duel.jpg";
+import worldGoalkeeper from "@/assets/sports/blog-world-goalkeeper.jpg";
+import worldJuggling from "@/assets/sports/blog-world-juggling.jpg";
+import worldNumberEight from "@/assets/sports/blog-world-number-eight.jpg";
+import worldShot from "@/assets/sports/blog-world-shot.jpg";
+import worldStrike from "@/assets/sports/blog-world-strike.jpg";
 import { publicUrl } from "@/lib/utils";
 
 /**
@@ -82,9 +89,130 @@ interface Seed {
   date: string;
   status: "draft" | "published";
   content: string;
+  /** Optional dedicated photo; otherwise one is assigned from FEATURED_IMAGES */
+  image?: string;
 }
 
 const seeds: Seed[] = [
+  {
+    title: "Talent ID around the world: the same questions everywhere",
+    category: "Scouting",
+    author: "Sofia Lindqvist",
+    date: "Oct 20, 2026",
+    status: "published",
+    image: worldDuel,
+    content: `<p>Spend time with youth scouts in Lisbon, Lagos, São Paulo or Seoul and you notice something quickly. The accents change, the pitches change, and the competitions have different names. The questions they ask about a young player barely change at all.</p>
+<p>Can the player handle the ball under pressure? Do they make decisions early or late? How do they respond after a mistake? Are they still improving, and how quickly? Those questions sit underneath almost every talent identification model in the professional game, whatever country it comes from.</p>
+<h2>Why that matters for players outside the big systems</h2>
+<p>If the questions are universal, the barrier for most players is not the standard they are judged against. It is whether anyone gets to ask those questions about them in the first place. A player in a small town with no academy nearby can answer every one of them well and still never be seen.</p>
+<p>That is why consistent footage and honest context travel so well. A scout in another country does not need to know the local league to understand a clip that shows a player receiving on the half turn, scanning before the ball arrives, and recovering after losing it.</p>
+<blockquote>Good scouting looks the same everywhere. Access to scouting is what varies.</blockquote>
+<h2>What players and coaches can do</h2>
+<p>Film full matches rather than only highlights. Note the age group, the level of opposition and the player's position. Record progress over months, not days. These simple habits turn a local performance into something a decision maker anywhere in the world can read with confidence.</p>
+<p>Opportunity 4 All Talents exists to help that information travel: from a pitch that rarely gets visitors to the people who are already asking the right questions.</p>`,
+  },
+  {
+    title: "The overlooked pathway: developing young goalkeepers",
+    category: "Pathways",
+    author: "Daniel Reyes",
+    date: "Oct 13, 2026",
+    status: "published",
+    image: worldGoalkeeper,
+    content: `<p>Ask a group of young players who wants to go in goal and you will usually get a long silence. Goalkeeping is often the position left to whoever is tallest, newest or least confident with the ball at their feet. That habit costs the game a lot of talent.</p>
+<p>Modern goalkeepers are expected to organise a defence, read danger early, distribute with both feet and stay composed for long periods with little to do. Those are skills that need dedicated coaching from an early age, and in many clubs around the world that coaching simply is not there.</p>
+<h2>What good goalkeeper development looks like</h2>
+<p>The strongest programmes treat goalkeepers as specialists from the start. They give them their own sessions, their own feedback and enough match minutes to make mistakes and learn from them. They also involve keepers in outfield drills so that passing and receiving become natural rather than an afterthought.</p>
+<blockquote>A goalkeeper who is coached like an outfield player with gloves rarely reaches their potential. One who is coached as a specialist often does.</blockquote>
+<h2>How visibility works differently in goal</h2>
+<p>Highlight clips favour dramatic saves, but scouts looking at goalkeepers want much more: positioning before the shot, communication, handling of crosses, decisions on when to come off the line, and how quickly the keeper restarts play. Full match footage shows all of that far better than a reel of diving stops.</p>
+<p>For young keepers and their coaches, the message is simple. Film the whole game, include the quiet moments, and make sure the story explains how the player has developed in the position, not only how many shots they saved.</p>`,
+  },
+  {
+    title: "What youth scouts in Europe look for in young players",
+    category: "Scouting",
+    author: "Marcus Chen",
+    date: "Oct 6, 2026",
+    status: "published",
+    image: worldShot,
+    content: `<p>European academies are often seen as the end point of a young player's ambitions, and their recruitment processes can feel mysterious from the outside. In practice, most youth scouts across the continent work from a similar set of priorities, and very few of them start with physical size or speed.</p>
+<h2>Technique under pressure</h2>
+<p>The first thing many scouts watch is how a player handles the ball when time and space disappear. Clean first touches, the ability to play forward, and comfort on both feet tend to matter more than flashy individual skills performed in open space.</p>
+<h2>Game intelligence</h2>
+<p>Scouts look for players who understand the game around them: who scan before receiving, who move to create angles for teammates, and who make good decisions without the ball. These qualities are harder to coach later, so they are valued highly at a young age.</p>
+<h2>Attitude and learning speed</h2>
+<p>Because young players change so much physically, scouts care a great deal about how quickly a player learns. Coachability, resilience after mistakes and consistency across matches all feature heavily in reports.</p>
+<blockquote>Scouts are rarely judging who is best today. They are trying to predict who will keep improving.</blockquote>
+<h2>Why context changes the picture</h2>
+<p>A player's age relative to their group, the level of opposition and their access to coaching all shape how a performance should be read. Profiles that include that context help scouts compare players fairly, including those developing far away from Europe's established academies.</p>`,
+  },
+  {
+    title: "Grassroots football around the world: what every system shares",
+    category: "Pathways",
+    author: "Priya Raman",
+    date: "Sep 29, 2026",
+    status: "published",
+    image: worldStrike,
+    content: `<p>Grassroots football looks very different from one country to the next. In some places it means artificial pitches, qualified coaches and organised leagues from the age of six. In others it means a patch of open ground, a borrowed ball and a game that lasts until it gets dark.</p>
+<p>Yet when you look closely at the systems that consistently produce good players, the same ingredients keep appearing.</p>
+<h2>Lots of touches, lots of games</h2>
+<p>Young players improve fastest when they spend most of their time with a ball at their feet. Small-sided games, street football and informal play all deliver this, which is why talented players regularly emerge from places with very few facilities.</p>
+<h2>Coaches who stay</h2>
+<p>Continuity matters. A coach who works with the same players over several years notices patterns of development that a one-off visitor never will. That knowledge is also some of the most valuable context a scout can receive.</p>
+<h2>A route to the next level</h2>
+<p>The biggest difference between grassroots systems is not talent or enthusiasm. It is whether a clear route exists from the local pitch to the next stage, whether that is an academy, a school programme or a club with scouting links.</p>
+<blockquote>Talent appears wherever children play. Pathways only appear where someone builds them.</blockquote>
+<p>Supporting grassroots football with equipment, education, video capture and introductions helps build those routes, so that a player's future depends less on where they happen to grow up.</p>`,
+  },
+  {
+    title: "Youth sponsorship that works: lessons from clubs around the world",
+    category: "Partnerships",
+    author: "Amara Okafor",
+    date: "Sep 22, 2026",
+    status: "published",
+    image: worldNumberEight,
+    content: `<p>Shirt sponsors on youth kits are a familiar sight from Buenos Aires to Bucharest. Local businesses, regional brands and community organisations have long supported young teams. The partnerships that create real value, for the club and the sponsor alike, tend to share a few traits.</p>
+<h2>They fund something specific</h2>
+<p>The most effective youth sponsorships are tied to a clear purpose: a season of kit, transport to tournaments, a goalkeeper coaching programme or match filming for every age group. A defined outcome makes the partnership easy to explain and easy to measure.</p>
+<h2>They tell the story honestly</h2>
+<p>Families and communities respond to authentic stories about players and coaches, not to logos alone. Sponsors who share how their support is used, with consent and care for the young people involved, build far more goodwill than those who simply display a name.</p>
+<blockquote>The best youth partnerships make the sponsor part of the club's story rather than an advert on its shirt.</blockquote>
+<h2>They think long term</h2>
+<p>Player development takes years. Partnerships that commit across several seasons give clubs the stability to plan and give sponsors the chance to follow players as they grow, sometimes all the way to senior football.</p>
+<p>These principles apply whether a club is in a major city or a small town. They are also the foundation of every activation Opportunity 4 All Talents builds with its partners.</p>`,
+  },
+  {
+    title: "University football as a pathway: how the college route works",
+    category: "Education",
+    author: "Sofia Lindqvist",
+    date: "Sep 15, 2026",
+    status: "published",
+    image: worldCollege,
+    content: `<p>For many young players, the choice can feel like professional football or nothing. In reality there is another well-established route: playing at university level, most notably through college soccer in the United States, while earning a degree at the same time.</p>
+<h2>Why players consider it</h2>
+<p>University programmes can offer high-quality coaching, competitive matches, strength and conditioning support, and an education that protects a player's future whatever happens on the pitch. Some players go on to professional contracts afterwards. Many others build careers in coaching, sports science, business or beyond.</p>
+<h2>What coaches look for</h2>
+<p>University coaches recruit from all over the world. Alongside football ability, they look at academic records, English language skills and character references. Match footage is essential, and so is honest information about the level a player has competed at.</p>
+<blockquote>A strong football profile opens the conversation. Good grades and good character often decide it.</blockquote>
+<h2>Planning ahead</h2>
+<p>The process usually starts well before the final year of school. Players and families should research eligibility rules, prepare for any required tests, and keep footage and academic documents organised. Be cautious of anyone who promises a guaranteed place in exchange for a fee.</p>
+<p>The university route is not right for everyone, but for the right player it turns football into a pathway with more than one destination.</p>`,
+  },
+  {
+    title: "Why touch and technique start long before the academy",
+    category: "Education",
+    author: "Daniel Reyes",
+    date: "Sep 8, 2026",
+    status: "published",
+    image: worldJuggling,
+    content: `<p>Watch a group of talented ten-year-olds anywhere in the world and the ones who stand out are rarely the biggest or fastest. They are the ones who seem to have more time on the ball, because their first touch puts it exactly where they need it.</p>
+<p>That kind of technique is built through thousands of repetitions, and most of those repetitions happen away from organised training: juggling in the garden, playing against a wall, small games with friends after school.</p>
+<h2>Simple habits that compound</h2>
+<p>Juggling with both feet, receiving the ball on the half turn, and using both sides of the body are small habits that add up over years. Coaches can encourage them by setting simple challenges players can practise alone, with nothing more than a ball and a little space.</p>
+<blockquote>Academies refine technique. They rarely have time to build it from the beginning.</blockquote>
+<h2>Making the work visible</h2>
+<p>Technique is easy to see on video. Short, honest clips that show a player's touch in matches, not only in practice, give scouts a clear picture of their foundation. Recording progress over a season also shows how quickly a player is improving, which is often what scouts care about most.</p>
+<p>Whatever the facilities, a ball and some daily practice remain the most reliable way to build the skills that open doors later on.</p>`,
+  },
   {
     title: "From local pitch to wider visibility: a player story",
     category: "Player Stories",
@@ -439,6 +567,11 @@ const slugify = (value: string) =>
     .trim()
     .replace(/\s+/g, "-");
 
+// Seeds with a dedicated photo keep it; the rest take turns from FEATURED_IMAGES
+// in their original order, so adding posts never reshuffles existing images.
+let featuredIndex = 0;
+const imageFor = (seed: Seed) => seed.image ?? FEATURED_IMAGES[featuredIndex++ % FEATURED_IMAGES.length];
+
 export const demoBlogPosts: BlogPost[] = seeds.map((seed, index) => ({
   id: `demo-post-${index + 1}`,
   title: seed.title,
@@ -449,10 +582,10 @@ export const demoBlogPosts: BlogPost[] = seeds.map((seed, index) => ({
   status: seed.status,
   date: seed.date,
   read_time: estimateReadTime(seed.content),
-  image: FEATURED_IMAGES[index % FEATURED_IMAGES.length],
+  image: imageFor(seed),
   content: seed.content,
-  created_at: new Date(2026, 5, 1 + index).toISOString(),
-  updated_at: new Date(2026, 5, 1 + index).toISOString(),
+  created_at: new Date(seed.date).toISOString(),
+  updated_at: new Date(seed.date).toISOString(),
 }));
 
 export const demoCategories = Array.from(

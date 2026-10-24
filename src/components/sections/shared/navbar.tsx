@@ -19,16 +19,16 @@ import BrandLogo from "@/components/brand-logo";
 
 const pages = [
   {
+    name: "Our Story",
+    href: "/company"
+  },
+  {
     name: "What We Do",
     href: "/features"
   },
   {
     name: "Partnerships",
     href: "/pricing"
-  },
-  {
-    name: "Our Story",
-    href: "/company"
   },
   {
     name: "People",

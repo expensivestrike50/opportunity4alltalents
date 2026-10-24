@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
 import { Link } from "react-router-dom";
-import globalPathway from "@/assets/sports/ghana-player.jpg";
+import globalPathway from "@/assets/sports/vision-world-players.jpg";
 
 const Vision = () => {
 
@@ -53,7 +53,8 @@ const Vision = () => {
                     >
                         <img
                             src={globalPathway}
-                            alt="Our Vision"
+                            alt="Two young footballers contesting the ball during a match"
+                            className="w-full aspect-[4/5] rounded-3xl object-cover object-top"
                             loading="lazy" />
                     </AnimateOnView>
                     <AnimateOnView className="space-y-8 max-w-[715px] w-full">

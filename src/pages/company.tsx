@@ -1,8 +1,6 @@
 import Layout from "@/components/layout";
-import CEOProfile from "@/components/sections/company/ceo-profile";
 import GlobalLocations from "@/components/sections/company/global-locations";
 import CompanyHero from "@/components/sections/company/hero";
-import HeroImage from "@/components/sections/company/hero-image";
 import Investors from "@/components/sections/company/investors";
 import Mission from "@/components/sections/company/mission";
 import TeamOverview from "@/components/sections/company/team-overview";
@@ -33,7 +31,6 @@ const CompanyPage = () => {
             />
             <Layout>
                 <CompanyHero />
-                <HeroImage />
                 <Suspense fallback={null}>
                     <Values />
                 </Suspense>
@@ -48,11 +45,6 @@ const CompanyPage = () => {
                 </Suspense>
                 <Suspense fallback={null}>
                     <TeamOverview />
-                </Suspense>
-                <Suspense fallback={null}>
-                </Suspense>
-                <Suspense fallback={null}>
-                    <CEOProfile />
                 </Suspense>
                 <Suspense fallback={null}>
                     <GlobalLocations />
