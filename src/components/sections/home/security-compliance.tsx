@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const PartnershipsCompliance = () => {
@@ -58,14 +57,13 @@ const PartnershipsCompliance = () => {
             <Button asChild>
               <Link to="/contact">
                 Become a Partner
-                <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
           </AnimateOnView>
         </div>
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 md:mb-[120px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <AnimateOnView
               key={index}
@@ -86,23 +84,6 @@ const PartnershipsCompliance = () => {
             </AnimateOnView>
           ))}
         </div>
-
-        {/* Bottom Banner */}
-        <AnimateOnView
-          once
-          delay={0.3}
-          className="p-[27px] bg-revio-light-green flex flex-col md:flex-row items-center justify-center gap-3"
-        >
-          <p className="text-foreground text-lg text-center md:text-left max-w-[400px] md:max-w-full">
-            Partnership activation rooted in real football stories, credible access, and shared impact.
-          </p>
-          <Button className="bg-foreground text-background hover:bg-foreground/90" asChild>
-            <Link to="/contact">
-              Become a Partner
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </Button>
-        </AnimateOnView>
       </Container>
     </section>
   );

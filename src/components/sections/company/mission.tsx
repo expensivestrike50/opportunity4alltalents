@@ -1,9 +1,8 @@
-import matchPrep from "@/assets/sports/match-prep.jpg";
+import matchPrep from "@/assets/sports/cone-dribbling.jpg";
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
-import { ArrowRight } from "lucide-react";
 import { publicUrl } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
@@ -55,7 +54,6 @@ const Mission = () => {
                                     <Button asChild className="bg-primary text-white hover:bg-primary/90 w-fit">
                                         <Link to="/contact">
                                             Partner With Us
-                                            <ArrowRight className="w-5 h-5" />
                                         </Link>
                                     </Button>
 

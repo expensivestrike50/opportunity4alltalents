@@ -61,7 +61,7 @@ const DemoProfileSettings = () => {
       <div className="mb-8">
         <h1 className="text-2xl font-semibold text-white">My Profile</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          Sample profile — changes are local to this demo session.
+          Sample profile. Changes are local to this demo session.
         </p>
       </div>
 

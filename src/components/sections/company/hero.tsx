@@ -2,7 +2,6 @@ import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Badge } from "../../ui/badge";
 
@@ -34,12 +33,11 @@ const CompanyHero = () => {
                         <Button asChild className="bg-primary text-white hover:bg-primary/90">
                             <Link to="/contact">
                                 Partner With Us
-                                <ArrowRight className="w-5 h-5 ml-1" />
                             </Link>
                         </Button>
                     </AnimateOnView>
                     <AnimateOnView delay={0.5}>
-                        <Button variant="link" asChild>
+                        <Button asChild className="bg-primary text-white hover:bg-primary/90">
                             <Link to="/features">
                                 Explore Our Work
                             </Link>

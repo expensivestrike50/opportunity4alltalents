@@ -6,7 +6,6 @@ import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
 import { partners } from "@/data/partners";
 import { cn } from "@/lib/utils";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Investors = () => {
@@ -28,7 +27,6 @@ const Investors = () => {
                         <Button asChild>
                             <Link to="/contact">
                                 Join Us Now
-                                <ArrowRight className="w-5 h-5" />
                             </Link>
                         </Button>
                     </AnimateOnView>
@@ -54,10 +52,6 @@ const Investors = () => {
                                                 <span className="text-sm font-medium text-foreground truncate">
                                                     {partner.firm}
                                                 </span>
-                                            </span>
-
-                                            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-neutral-200 text-foreground group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-colors">
-                                                <ArrowUpRight className="w-4 h-4" />
                                             </span>
                                         </div>
 

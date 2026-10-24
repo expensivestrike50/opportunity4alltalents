@@ -1,6 +1,6 @@
-import matchPrep from "@/assets/sports/match-prep.jpg";
-import scouting from "@/assets/sports/scouting.jpg";
-import actionSquare from "@/assets/sports/action-square.jpg";
+import matchPrep from "@/assets/sports/cone-dribbling.jpg";
+import scouting from "@/assets/sports/player-smiling.jpg";
+import actionSquare from "@/assets/sports/player-with-ball.jpg";
 import Container from "@/components/container";
 import { Card, CardContent } from "@/components/ui/card";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";

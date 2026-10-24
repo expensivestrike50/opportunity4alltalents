@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { ArrowRight } from "lucide-react";
 import { publicUrl } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
@@ -328,7 +327,6 @@ const TeamOverview = () => {
                         <Button asChild className="bg-primary text-white hover:bg-primary/90">
                             <Link to="/contact">
                                 Join Us Now
-                                <ArrowRight className="w-5 h-5" />
                             </Link>
                         </Button>
                     </AnimateOnView>

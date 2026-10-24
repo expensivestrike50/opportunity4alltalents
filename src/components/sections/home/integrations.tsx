@@ -1,6 +1,6 @@
 import Container from "@/components/container";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
-import teamCommunity from "@/assets/sports/team-community.jpg";
+import teamCommunity from "@/assets/sports/youth-huddle.jpg";
 
 const Integrations = () => {
   return (

@@ -2,7 +2,7 @@ import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
-import { ArrowRight, SquareCheck } from "lucide-react";
+import { SquareCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const plans = [
@@ -111,7 +111,7 @@ const PricingPlans = () => {
                     asChild
                   >
                     <Link to={plan.buttonLink}>
-                      Get Started <ArrowRight className="w-4 h-4" />
+                      Get Started
                     </Link>
                   </Button>
                 </CardContent>

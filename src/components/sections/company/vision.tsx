@@ -3,9 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import globalPathway from "@/assets/sports/global-pathway.jpg";
+import globalPathway from "@/assets/sports/ghana-player.jpg";
 
 const Vision = () => {
 
@@ -42,7 +41,6 @@ const Vision = () => {
                         <Button asChild>
                             <Link to="/contact">
                                 Partner With Us
-                                <ArrowRight className="w-5 h-5" />
                             </Link>
                         </Button>
                     </AnimateOnView>

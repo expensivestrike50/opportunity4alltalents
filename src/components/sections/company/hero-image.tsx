@@ -1,6 +1,6 @@
-import heroPlayer from "@/assets/sports/hero-player.jpg";
-import grassrootsMatch from "@/assets/sports/grassroots-match.jpg";
-import teamCommunity from "@/assets/sports/team-community.jpg";
+import heroPlayer from "@/assets/sports/ghana-player.jpg";
+import grassrootsMatch from "@/assets/sports/street-football.jpg";
+import teamCommunity from "@/assets/sports/youth-huddle.jpg";
 import Container from "@/components/container";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 

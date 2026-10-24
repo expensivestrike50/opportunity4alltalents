@@ -13,7 +13,7 @@ const TestimonialCard = ({
     return (
         <Card className={cn("h-full col-span-5 flex flex-col justify-between items-start gap-16 hover:shadow-lg transition-shadow", className)}>
             <CardHeader>
-                <img src={companyLogo} alt="company logo" className="h-6" width="120" height="24" loading="lazy" />
+                <img src={companyLogo} alt="company logo" className="h-6 w-auto" width="120" height="24" loading="lazy" />
             </CardHeader>
             <CardContent className="flex flex-col gap-10 max-w-[313px]">
                 <p className="">

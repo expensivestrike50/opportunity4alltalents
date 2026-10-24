@@ -74,7 +74,7 @@ const DemoBlogDashboard = () => {
         <div>
           <h1 className="text-2xl font-semibold text-white">All Posts</h1>
           <p className="mt-1 text-sm text-muted-foreground">
-            Interactive demo with sample data — nothing is saved.
+            Interactive demo with sample data. Nothing is saved.
           </p>
         </div>
 

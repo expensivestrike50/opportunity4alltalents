@@ -259,8 +259,8 @@ const DemoBlogEditor = () => {
                 onChange={(e) => setStatus(e.target.value as BlogPostStatus)}
                 className="w-full h-12 px-3 rounded-[10px] bg-foreground border border-white/10 text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               >
-                <option value="draft">Draft — hidden from the site</option>
-                <option value="published">Published — live on the site</option>
+                <option value="draft">Draft (hidden from the site)</option>
+                <option value="published">Published (live on the site)</option>
               </select>
             </div>
           </div>

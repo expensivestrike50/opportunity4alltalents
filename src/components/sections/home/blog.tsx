@@ -6,7 +6,6 @@ import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useBlogPosts } from "@/hooks/use-blog";
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
@@ -21,7 +20,7 @@ const Blog = () => {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between md:gap-8 gap-4">
           <StaggerContainer
-            className="max-w-[567px]"
+            className="max-w-[567px] md:max-w-none"
           >
             <AnimateOnView
               once
@@ -37,14 +36,13 @@ const Blog = () => {
               delay={0.1}
             >
               <h2 className="h2">
-                Stories from players, pathways, and grassroots football
+                Stories from players, pathways,<br className="hidden sm:block" /> and grassroots football
               </h2>
             </AnimateOnView>
           </StaggerContainer>
           <Link to="/blog">
             <Button variant="secondary">
               All Blogs
-              <ArrowRight className="w-4 h-4" />
             </Button>
           </Link>
         </div>

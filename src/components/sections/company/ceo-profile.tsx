@@ -2,7 +2,7 @@ import Container from "@/components/container";
 import { Badge } from "@/components/ui/badge";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
-import mentorship from "@/assets/sports/mentorship.jpg";
+import mentorship from "@/assets/sports/player-with-ball.jpg";
 
 const CEOProfile = () => {
     return (

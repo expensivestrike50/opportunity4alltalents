@@ -1,8 +1,8 @@
-import trainingWide from "@/assets/sports/training-wide.jpg";
+import trainingWide from "@/assets/sports/team-training.jpg";
 const stadiumCrowd = "https://images.unsplash.com/photo-1569531955323-33c6b2dca44b?q=80&w=1200&auto=format&fit=crop";
-import grassrootsMatch from "@/assets/sports/grassroots-match.jpg";
-import matchPrep from "@/assets/sports/match-prep.jpg";
-import playerPortrait from "@/assets/sports/player-portrait.jpg";
+import hiddenGemBoy from "@/assets/sports/hidden-gem-boy.jpg";
+import hiddenGemGirl from "@/assets/sports/hidden-gem-girl.jpg";
+import youthHuddle from "@/assets/sports/youth-huddle.jpg";
 import settlements from "@/assets/lottie/settled.json";
 import Container from "@/components/container";
 import { Badge } from "@/components/ui/badge";
@@ -12,15 +12,14 @@ import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
 import Lottie from "lottie-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const hiddenGemSlides = [
+  { image: youthHuddle, alt: "Young footballers smiling together around a ball" },
+  { image: hiddenGemBoy, alt: "Young football player dribbling through a training drill" },
+  { image: hiddenGemGirl, alt: "Smiling young female football player" },
   { image: trainingWide, alt: "Emerging African footballers training together" },
-  { image: grassrootsMatch, alt: "Grassroots football talent in a competitive match" },
-  { image: matchPrep, alt: "Young football player preparing for a match" },
-  { image: playerPortrait, alt: "Portrait of an emerging African football player" },
 ];
 
 const CoreFeatures = () => {
@@ -34,14 +33,6 @@ const CoreFeatures = () => {
     }, 5000);
     return () => window.clearInterval(interval);
   }, [shouldReduceMotion]);
-
-  const showPreviousSlide = () => {
-    setActiveSlide((current) => (current - 1 + hiddenGemSlides.length) % hiddenGemSlides.length);
-  };
-
-  const showNextSlide = () => {
-    setActiveSlide((current) => (current + 1) % hiddenGemSlides.length);
-  };
 
   return (
     <section className="md:pt-20 xl:pt-32 pt-12 md:pb-20 xl:pb-32 pb-12" id="core-features">
@@ -84,7 +75,6 @@ const CoreFeatures = () => {
             <Button asChild>
               <Link to="/contact">
                 Become a Partner
-                <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
           </AnimateOnView>
@@ -139,21 +129,9 @@ const CoreFeatures = () => {
                 <Button asChild>
                   <Link to="/download">
                     Explore Partnerships
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
+                      </Link>
                 </Button>
               </AnimateOnView>
-            </div>
-            <div className="absolute bottom-6 right-6 z-20 flex items-center gap-3 md:bottom-10 md:right-10">
-              <span className="min-w-12 text-center text-sm font-medium text-primary-foreground" aria-live="polite">
-                {String(activeSlide + 1).padStart(2, "0")} / {String(hiddenGemSlides.length).padStart(2, "0")}
-              </span>
-              <Button variant="outline" size="icon" onClick={showPreviousSlide} aria-label="Previous Hidden Gem photo" className="border-primary-foreground/40 bg-background/10 text-primary-foreground backdrop-blur-sm hover:bg-background/20">
-                <ArrowLeft />
-              </Button>
-              <Button variant="outline" size="icon" onClick={showNextSlide} aria-label="Next Hidden Gem photo" className="border-primary-foreground/40 bg-background/10 text-primary-foreground backdrop-blur-sm hover:bg-background/20">
-                <ArrowRight />
-              </Button>
             </div>
           </AnimateOnView>
 

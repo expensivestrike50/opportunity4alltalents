@@ -1,14 +1,13 @@
-import grassrootsMatch from "@/assets/sports/grassroots-match.jpg";
-import scouting from "@/assets/sports/scouting.jpg";
-import mentorship from "@/assets/sports/mentorship.jpg";
-import trainingWide from "@/assets/sports/training-wide.jpg";
+import grassrootsMatch from "@/assets/sports/street-football.jpg";
+import scouting from "@/assets/sports/player-smiling.jpg";
+import mentorship from "@/assets/sports/player-with-ball.jpg";
+import trainingWide from "@/assets/sports/team-training.jpg";
 import Container from "@/components/container";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -148,7 +147,6 @@ const CoreFeatures = () => {
             <Button asChild>
               <Link to="/contact">
                 Become a Partner
-                <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
           </AnimateOnView>

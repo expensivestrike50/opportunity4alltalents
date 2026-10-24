@@ -13,7 +13,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -236,7 +235,6 @@ const ContactForm = () => {
                 disabled={form.formState.isSubmitting}
               >
                 Send a Message
-                <ArrowRight className="h-4 w-4" />
               </Button>
               <p 
                 className={cn(

@@ -8,7 +8,7 @@ import { StaggerContainer } from "@/components/ui/motion/stagger";
 import { people, positions, type Position } from "@/data/people";
 import { appConfig } from "@/utils/app-config";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -172,7 +172,6 @@ const People = () => {
                       className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-primary transition-colors"
                     >
                       Learn more
-                      <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </AnimateOnView>
                 ))}

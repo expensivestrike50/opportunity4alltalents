@@ -2,7 +2,7 @@ import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
-import { ArrowRight, SquareCheck } from "lucide-react";
+import { SquareCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface PlanDetailsProps {
@@ -43,7 +43,7 @@ const PlanDetails = ({ planName, price, description, features }: PlanDetailsProp
                   asChild
                 >
                   <Link to="/contact">
-                    Get Started <ArrowRight className="w-4 h-4" />
+                    Get Started
                   </Link>
                 </Button>
               </CardFooter>

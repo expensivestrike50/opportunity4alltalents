@@ -27,7 +27,7 @@ const BlogCard = ({
                     <img
                         src={image}
                         alt="Blog Thumbnail"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
+                        className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-all duration-300"
                         width="400"
                         height="300"
                         loading="lazy"

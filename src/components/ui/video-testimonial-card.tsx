@@ -76,7 +76,7 @@ const VideoTestimonialCard = ({
             </svg>{" "}
             Watch
           </Button>
-          <img src={logo} alt="Company logo" className="h-4" width="80" height="16" loading="lazy" />
+          <img src={logo} alt="Company logo" className="h-4 w-auto" width="80" height="16" loading="lazy" />
         </CardContent>
       </Card>
 

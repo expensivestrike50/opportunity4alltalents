@@ -1,10 +1,10 @@
 import type { BlogPost } from "@/lib/services/blog-service";
-import globalPathway from "@/assets/sports/global-pathway.jpg";
-import grassrootsMatch from "@/assets/sports/grassroots-match.jpg";
-import matchPrep from "@/assets/sports/match-prep.jpg";
-import scouting from "@/assets/sports/scouting.jpg";
-import teamCommunity from "@/assets/sports/team-community.jpg";
-import trainingWide from "@/assets/sports/training-wide.jpg";
+import globalPathway from "@/assets/sports/blog-ghana-player.jpg";
+import playerStory from "@/assets/sports/blog-player-with-ball.jpg";
+import matchPrep from "@/assets/sports/blog-cone-dribbling.jpg";
+import scouting from "@/assets/sports/blog-player-smiling.jpg";
+import teamCommunity from "@/assets/sports/blog-youth-huddle.jpg";
+import trainingWide from "@/assets/sports/blog-team-training.jpg";
 import { publicUrl } from "@/lib/utils";
 
 /**
@@ -31,7 +31,7 @@ export const demoProfile: DemoProfile = {
 
 // Bundled local photography (src/assets/sports).
 const LOCAL_IMAGES = [
-  grassrootsMatch,
+  playerStory,
   scouting,
   trainingWide,
   matchPrep,

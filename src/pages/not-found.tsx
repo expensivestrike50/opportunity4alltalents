@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -20,7 +19,6 @@ const NotFound = () => {
         <Button asChild>
           <Link to="/">
             Return to Home
-            <ArrowRight className="w-5 h-5" />
           </Link>
         </Button>
       </div>

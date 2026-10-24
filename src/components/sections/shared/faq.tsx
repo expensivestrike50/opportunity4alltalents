@@ -3,7 +3,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const faqs = [
@@ -53,7 +52,7 @@ const FAQ = () => {
               <h2 className="h2 md:mb-6 mb-3">Frequently asked questions</h2>
               <Button asChild>
                 <Link to="/contact">
-                  Book a free call <ArrowRight className="w-4 h-4" />
+                  Book a free call
                 </Link>
               </Button>
             </AnimateOnView>

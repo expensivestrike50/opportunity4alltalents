@@ -14,16 +14,16 @@ import {
   Rocket,
 } from "lucide-react";
 
-import grassrootsMatch from "@/assets/sports/grassroots-match.jpg";
-import trainingWide from "@/assets/sports/training-wide.jpg";
-import scouting from "@/assets/sports/scouting.jpg";
-import matchPrep from "@/assets/sports/match-prep.jpg";
-import mentorship from "@/assets/sports/mentorship.jpg";
-import globalPathway from "@/assets/sports/global-pathway.jpg";
-import actionSquare from "@/assets/sports/action-square.jpg";
-import playerPortrait from "@/assets/sports/player-portrait.jpg";
-import teamCommunity from "@/assets/sports/team-community.jpg";
-import heroPlayer from "@/assets/sports/hero-player.jpg";
+import grassrootsMatch from "@/assets/sports/street-football.jpg";
+import trainingWide from "@/assets/sports/team-training.jpg";
+import scouting from "@/assets/sports/player-smiling.jpg";
+import matchPrep from "@/assets/sports/cone-dribbling.jpg";
+import mentorship from "@/assets/sports/player-with-ball.jpg";
+import globalPathway from "@/assets/sports/ghana-player.jpg";
+import actionSquare from "@/assets/sports/player-with-ball.jpg";
+import playerPortrait from "@/assets/sports/player-smiling.jpg";
+import teamCommunity from "@/assets/sports/youth-huddle.jpg";
+import heroPlayer from "@/assets/sports/ghana-player.jpg";
 
 export interface PartnerSection {
   heading: string;
@@ -172,7 +172,7 @@ export const partners: PartnerCaseStudy[] = [
     challenge:
       "NextWave wanted a partnership with real structural impact on African football talent, not a sponsorship that ended at a logo placement.",
     solution:
-      "O4AT and NextWave built a named initiative — the O4AT × NextWave African Talent Development Initiative — spanning grassroots access, education content, and pathway support across three countries.",
+      "O4AT and NextWave built a named initiative, the O4AT × NextWave African Talent Development Initiative, spanning grassroots access, education content, and pathway support across three countries.",
     results: [
       "A dedicated, co-branded talent-development initiative",
       "Grassroots access support extended into two new regions",
@@ -217,7 +217,7 @@ export const partners: PartnerCaseStudy[] = [
       { icon: Radio, label: "Podcast presenting sponsorship" },
     ],
     challenge:
-      "Equity wanted to own a category — player development — rather than compete for attention alongside every other sponsor on the page.",
+      "Equity wanted to own the player development category rather than compete for attention alongside every other sponsor on the page.",
     solution:
       "O4AT gave Equity exclusive category positioning as the official player-development partner, with monthly content integration and presenting rights on the podcast.",
     results: [
@@ -236,7 +236,7 @@ export const partners: PartnerCaseStudy[] = [
       {
         heading: "Making a Gold partnership visible internally",
         paragraphs: [
-          "Monthly content integration gives Equity's own team a steady stream of material to point to — not just an annual case study, but ongoing proof the partnership is working.",
+          "Monthly content integration gives Equity's own team a steady stream of material to point to, offering ongoing proof that the partnership is working rather than a single annual case study.",
         ],
       },
     ],
