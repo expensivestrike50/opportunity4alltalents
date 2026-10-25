@@ -261,15 +261,20 @@ const AdPopup = () => {
                                 </span>
 
                                 <div className="absolute inset-x-0 bottom-0 px-5 pb-11">
-                                    <span className="mb-3 block text-white">{ad.logo}</span>
+                                    {/* Sponsor logos stay blurred until partnerships are announced */}
+                                    <div className="mb-3 flex items-center gap-3">
+                                        <span className="block select-none text-white blur-[6px]" aria-hidden="true">{ad.logo}</span>
+                                        <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+                                            Announced soon
+                                        </span>
+                                    </div>
                                     <h3 className="text-lg sm:text-xl font-semibold leading-tight tracking-tight">
                                         {ad.title}
                                     </h3>
                                     <p className="mt-2 hidden text-sm text-white/75 sm:block">{ad.body}</p>
-                                    <Button asChild className="mt-3 w-full sm:mt-4">
-                                        <a href={ad.href} target="_blank" rel="noopener noreferrer sponsored">
-                                            {ad.cta}
-                                        </a>
+                                    {/* Brand links (ad.cta / ad.href) switch on once sponsors are announced */}
+                                    <Button type="button" disabled className="mt-3 w-full sm:mt-4 disabled:opacity-80">
+                                        Announced soon
                                     </Button>
                                 </div>
                             </motion.div>

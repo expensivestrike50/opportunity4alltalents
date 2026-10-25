@@ -44,10 +44,10 @@ const CompanyPage = () => {
                     <Investors />
                 </Suspense>
                 <Suspense fallback={null}>
-                    <TeamOverview />
+                    <GlobalLocations />
                 </Suspense>
                 <Suspense fallback={null}>
-                    <GlobalLocations />
+                    <TeamOverview />
                 </Suspense>
             </Layout>
         </>

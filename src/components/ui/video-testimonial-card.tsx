@@ -7,10 +7,18 @@ import {
   DialogContent,
 } from "./dialog";
 
+interface VideoCredit {
+  title: string;
+  channel: string;
+  channelUrl: string;
+}
+
 interface VideoTestimonialCardProps {
   thumbnail: string;
-  logo: string;
+  logo?: string;
   videoUrl: string;
+  /** Attribution for third-party videos, shown on the card and under the player */
+  credit?: VideoCredit;
   className?: string;
 }
 
@@ -42,6 +50,7 @@ const VideoTestimonialCard = ({
   thumbnail,
   logo,
   videoUrl,
+  credit,
   className,
 }: VideoTestimonialCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,7 +85,13 @@ const VideoTestimonialCard = ({
             </svg>{" "}
             Watch
           </Button>
-          <img src={logo} alt="Company logo" className="h-4 w-auto" width="80" height="16" loading="lazy" />
+          {credit ? (
+            <span className="rounded-[8px] bg-[rgba(0,0,0,0.37)] px-2 py-1 text-[11px] text-white backdrop-blur-[5px]">
+              via {credit.channel}
+            </span>
+          ) : (
+            logo && <img src={logo} alt="Company logo" className="h-4 w-auto" width="80" height="16" loading="lazy" />
+          )}
         </CardContent>
       </Card>
 
@@ -91,6 +106,18 @@ const VideoTestimonialCard = ({
               allowFullScreen
             />
           </div>
+          {credit && (
+            <p className="px-5 pb-4 text-sm text-muted-foreground">
+              Video: “{credit.title}” by{" "}
+              <a href={credit.channelUrl} target="_blank" rel="noopener noreferrer" className="font-medium text-foreground underline underline-offset-2">
+                {credit.channel}
+              </a>
+              {" · "}
+              <a href={videoUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
+                Watch on YouTube
+              </a>
+            </p>
+          )}
         </DialogContent>
       </Dialog>
     </>

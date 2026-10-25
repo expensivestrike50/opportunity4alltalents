@@ -131,14 +131,14 @@ const CoreFeatures = () => {
       <Container className="md:space-y-10 xl:space-y-2xl space-y-8">
         {/* Section Title */}
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between md:gap-8 gap-4">
-          <div className="flex-1 max-w-[683px]">
+          <div className="flex-1">
             <AnimateOnView once blur className="md:mb-4 mb-1.5">
               <Badge variant="default">Partnership Activation</Badge>
             </AnimateOnView>
 
             <AnimateOnView once blur delay={0.2}>
               <h2 className="h2">
-                Turn sponsorship into stories and measurable value.
+                Turn sponsorship into stories<br className="hidden sm:block" /> and measurable value.
               </h2>
             </AnimateOnView>
           </div>

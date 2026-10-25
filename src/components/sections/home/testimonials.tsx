@@ -8,6 +8,25 @@ import TestimonialCard from "@/components/ui/testimonial-card";
 import VideoTestimonialCard from "@/components/ui/video-testimonial-card";
 import { publicUrl } from "@/lib/utils";
 
+// Third-party videos, embedded with credit to their creators
+const GRASSROOTS_VIDEO = {
+  url: "https://www.youtube.com/watch?v=sfxtJMw-1tA",
+  credit: {
+    title: "Grassroots Football: What Parents Need to Know",
+    channel: "E.ON Energy UK",
+    channelUrl: "https://www.youtube.com/@eonenergyuk",
+  },
+};
+
+const BRIXTON_VIDEO = {
+  url: "https://www.youtube.com/watch?v=kdy4MIYtorw",
+  credit: {
+    title: "Tough Love: a documentary about grassroots football in Brixton, south London",
+    channel: "Fat Toad Films",
+    channelUrl: "https://www.youtube.com/@fattoadfilms",
+  },
+};
+
 const Testimonials = () => {
   return (
     <section className="md:pt-20 xl:pt-32 pt-12 md:pb-20 xl:pb-32 pb-12" id="testimonials">
@@ -48,8 +67,8 @@ const Testimonials = () => {
           <VideoTestimonialCard
             className="col-span-12 sm:col-span-6 lg:col-span-3 sm:order-2 lg:order-2"
             thumbnail={mentorship}
-            logo={publicUrl("/images/homepage/partner-meridian.svg")}
-            videoUrl="https://youtu.be/xDwR1_vrIg8"
+            videoUrl={GRASSROOTS_VIDEO.url}
+            credit={GRASSROOTS_VIDEO.credit}
           />
           <TestimonialCard
             className="col-span-12 sm:col-span-6 lg:col-span-4 sm:order-4 lg:order-3"
@@ -62,8 +81,8 @@ const Testimonials = () => {
           <VideoTestimonialCard
             className="col-span-12 sm:col-span-6 lg:col-span-3 sm:order-3 lg:order-4"
             thumbnail={teamCommunity}
-            logo={publicUrl("/images/homepage/partner-kickwell.svg")}
-            videoUrl="https://youtu.be/xDwR1_vrIg8"
+            videoUrl={BRIXTON_VIDEO.url}
+            credit={BRIXTON_VIDEO.credit}
           />
           <TestimonialCard
             className="col-span-12 sm:col-span-6 lg:col-span-4 sm:order-5 lg:order-5"
