@@ -1,7 +1,9 @@
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
+import { StaggerContainer } from "@/components/ui/motion/stagger";
 import { SquareCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -65,8 +67,27 @@ const plans = [
 
 const PricingPlans = () => {
   return (
-    <section className="relative mt-[-383px] z-20 md:pb-20 xl:pb-32 pb-12">
-      <Container>
+    <section className="md:pt-20 xl:pt-32 pt-12 md:pb-20 xl:pb-32 pb-12" id="partnership-tiers">
+      <Container className="md:space-y-10 xl:space-y-2xl space-y-8">
+        {/* Section Header */}
+        <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between md:gap-8 gap-4">
+          <StaggerContainer className="max-w-[683px]">
+            <AnimateOnView once blur className="flex items-center gap-2 md:mb-4 mb-1.5">
+              <Badge>
+                Partnership Tiers
+              </Badge>
+            </AnimateOnView>
+            <AnimateOnView once blur delay={0.1}>
+              <h2 className="h2">
+                Choose how your brand<br className="hidden sm:block" /> backs emerging talent
+              </h2>
+            </AnimateOnView>
+          </StaggerContainer>
+          <AnimateOnView once delay={0.2} className="max-w-[360px] text-muted-foreground">
+            Four annual tiers, from foundational recognition to a fully customised founding partnership.
+          </AnimateOnView>
+        </div>
+
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {plans.map((plan, index) => (
@@ -76,7 +97,7 @@ const PricingPlans = () => {
               y={40}
               delay={index * 0.1}
             >
-              <Card className={`h-full flex flex-col transition-all bg-white p-0 ${plan.highlighted ? "border-primary border-2 shadow-lg" : "md:border-0 border border-border"}`}>
+              <Card className={`h-full flex flex-col transition-all bg-white p-0 ${plan.highlighted ? "border-primary border-2 shadow-lg" : "border border-border"}`}>
                 <CardHeader className="space-y-4 px-6 pt-6 pb-[30px]">
                   <CardTitle className="h4">{plan.name}</CardTitle>
                   <div className="space-y-3">

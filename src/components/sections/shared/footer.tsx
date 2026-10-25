@@ -27,6 +27,10 @@ const pagesLinks = [
     href: "/blog",
   },
   {
+    title: "Careers",
+    href: "/careers",
+  },
+  {
     title: "Contact",
     href: "/contact",
   },

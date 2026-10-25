@@ -13,6 +13,7 @@ import DemoBlogEditor from "./pages/demo/blog/editor";
 import DemoProfileSettings from "./pages/demo/profile";
 import Blog from "./pages/blog";
 import BlogDetails from "./pages/blog/[slug]";
+import Careers from "./pages/careers";
 import Company from "./pages/company";
 import People from "./pages/people";
 import Contact from "./pages/contact";
@@ -50,6 +51,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/company" element={<Company />} />
+              <Route path="/careers" element={<Careers />} />
               <Route path="/people" element={<People />} />
               <Route path="/partners/:slug" element={<PartnerDetail />} />
               <Route path="/features" element={<Features />} />

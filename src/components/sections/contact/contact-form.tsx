@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useSearchParams } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -37,6 +38,8 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const ContactForm = () => {
+  // Links such as the careers page can pre-fill the subject, e.g. /contact?subject=...
+  const [searchParams] = useSearchParams();
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<ContactFormValues>({
@@ -46,7 +49,7 @@ const ContactForm = () => {
       lastName: "",
       email: "",
       phone: "",
-      subject: "",
+      subject: searchParams.get("subject") ?? "",
       message: "",
     },
   });

@@ -39,6 +39,10 @@ const pages = [
     href: "/blog"
   },
   {
+    name: "Career",
+    href: "/careers"
+  },
+  {
     name: "Contact",
     href: "/contact"
   }
