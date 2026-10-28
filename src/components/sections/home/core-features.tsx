@@ -67,17 +67,6 @@ const CoreFeatures = () => {
               From player discovery to storytelling and introductions, we make talent easier to see and support.
             </AnimateOnView>
           </div>
-
-          <AnimateOnView
-            once
-            delay={0.4}
-          >
-            <Button asChild>
-              <Link to="/contact">
-                Become a Partner
-              </Link>
-            </Button>
-          </AnimateOnView>
         </div>
 
         <div>
