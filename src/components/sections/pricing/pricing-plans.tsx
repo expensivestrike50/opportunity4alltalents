@@ -2,9 +2,12 @@ import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
+import { cn } from "@/lib/utils";
 import { SquareCheck } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const plans = [
@@ -65,6 +68,88 @@ const plans = [
   },
 ];
 
+const presetAmounts = [50, 100, 250, 500, 1000];
+const MIN_AMOUNT = 10;
+
+const formatAmount = (amount: number) => `$${amount.toLocaleString("en-US")}`;
+
+// For individuals and small businesses who want to back talent below the Bronze tier
+const CustomAmount = () => {
+  const [amount, setAmount] = useState("100");
+  const value = Number(amount);
+  const isValid = Number.isFinite(value) && value >= MIN_AMOUNT;
+
+  const subject = `Custom contribution: ${formatAmount(value)}`;
+  const message = `Hi, I'd like to contribute ${formatAmount(value)} to support emerging African football talent.`;
+  const contactLink = `/contact?subject=${encodeURIComponent(subject)}&message=${encodeURIComponent(message)}`;
+
+  return (
+    <AnimateOnView once y={40} delay={0.2}>
+      <Card className="bg-white p-0 border border-border">
+        <div className="grid gap-6 p-6 md:p-8 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-12">
+          <div className="space-y-3">
+            <Badge>Custom Amount</Badge>
+            <h3 className="h4">Back emerging talent with any amount</h3>
+            <p className="text-muted-foreground max-w-[520px]">
+              Not ready for a full partnership? Individuals and small businesses can contribute whatever works for them. Every contribution helps a young player get seen.
+            </p>
+          </div>
+
+          <div className="space-y-4 lg:w-[420px]">
+            <div className="flex flex-wrap gap-2" role="group" aria-label="Suggested amounts">
+              {presetAmounts.map((preset) => (
+                <button
+                  key={preset}
+                  type="button"
+                  onClick={() => setAmount(String(preset))}
+                  aria-pressed={value === preset}
+                  className={cn(
+                    "h-10 rounded-[10px] border px-4 text-sm font-medium transition-colors",
+                    value === preset
+                      ? "border-primary bg-primary text-white"
+                      : "border-border bg-white text-foreground hover:border-primary",
+                  )}
+                >
+                  {formatAmount(preset)}
+                </button>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <label className="relative flex-1">
+                <span className="sr-only">Custom amount in US dollars</span>
+                <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">$</span>
+                <Input
+                  type="number"
+                  inputMode="numeric"
+                  min={MIN_AMOUNT}
+                  step={1}
+                  value={amount}
+                  onChange={(event) => setAmount(event.target.value)}
+                  placeholder="Enter amount"
+                  className="h-[46px] bg-white pl-7 text-foreground"
+                />
+              </label>
+              {isValid ? (
+                <Button asChild>
+                  <Link to={contactLink}>Contribute {formatAmount(value)}</Link>
+                </Button>
+              ) : (
+                <Button type="button" disabled>
+                  Contribute
+                </Button>
+              )}
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Minimum {formatAmount(MIN_AMOUNT)}. We'll follow up by email to arrange your contribution.
+            </p>
+          </div>
+        </div>
+      </Card>
+    </AnimateOnView>
+  );
+};
+
 const PricingPlans = () => {
   return (
     <section className="md:pt-20 xl:pt-32 pt-12 md:pb-20 xl:pb-32 pb-12" id="partnership-tiers">
@@ -84,7 +169,7 @@ const PricingPlans = () => {
             </AnimateOnView>
           </StaggerContainer>
           <AnimateOnView once delay={0.2} className="max-w-[360px] text-muted-foreground">
-            Four annual tiers, from foundational recognition to a fully customised founding partnership.
+            Four annual tiers, from foundational recognition to a fully customised founding partnership, or contribute any amount.
           </AnimateOnView>
         </div>
 
@@ -140,6 +225,8 @@ const PricingPlans = () => {
             </AnimateOnView>
           ))}
         </div>
+
+        <CustomAmount />
       </Container>
     </section>
   );

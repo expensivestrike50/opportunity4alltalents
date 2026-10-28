@@ -38,7 +38,7 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const ContactForm = () => {
-  // Links such as the careers page can pre-fill the subject, e.g. /contact?subject=...
+  // Links such as the careers page can pre-fill the subject and message, e.g. /contact?subject=...&message=...
   const [searchParams] = useSearchParams();
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -50,7 +50,7 @@ const ContactForm = () => {
       email: "",
       phone: "",
       subject: searchParams.get("subject") ?? "",
-      message: "",
+      message: searchParams.get("message") ?? "",
     },
   });
 
