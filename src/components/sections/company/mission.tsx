@@ -36,14 +36,14 @@ const Mission = () => {
         <section className="md:pt-20 xl:pt-32 pt-12 md:pb-20 xl:pb-32 pb-12">
             <Container className="md:space-y-10 xl:space-y-2xl space-y-8">
                 {/* Section Title */}
-                <StaggerContainer className="max-w-[683px]">
+                <StaggerContainer>
                     <AnimateOnView once blur className="flex items-center gap-2 md:mb-4 mb-1.5">
                         <Badge>
                             Our Mission
                         </Badge>
                     </AnimateOnView>
                     <AnimateOnView once blur delay={0.1}>
-                        <h2 className="h2">
+                        <h2 className="h2 text-balance lg:whitespace-nowrap">
                             Why we exist and what drives us
                         </h2>
                     </AnimateOnView>
