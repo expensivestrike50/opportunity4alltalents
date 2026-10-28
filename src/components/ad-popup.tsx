@@ -229,7 +229,7 @@ const AdPopup = () => {
                     transition={{ type: "spring", stiffness: 260, damping: 24 }}
                     onMouseEnter={() => setPaused(true)}
                     onMouseLeave={() => setPaused(false)}
-                    className="fixed bottom-4 right-4 left-4 sm:left-auto sm:bottom-6 sm:right-6 z-50 sm:w-[360px] overflow-hidden rounded-2xl bg-black text-white shadow-[0_20px_60px_rgba(20,20,20,0.35)] ring-1 ring-white/10"
+                    className="fixed bottom-4 right-4 left-4 sm:left-auto sm:bottom-6 sm:right-6 z-50 sm:w-[min(360px,calc(60dvh*0.78))] overflow-hidden rounded-2xl bg-black text-white shadow-[0_20px_60px_rgba(20,20,20,0.35)] ring-1 ring-white/10"
                 >
                     <div className="relative overflow-hidden">
                         <AnimatePresence initial={false} custom={direction} mode="popLayout">
@@ -245,7 +245,7 @@ const AdPopup = () => {
                                 dragConstraints={{ left: 0, right: 0 }}
                                 dragElastic={0.6}
                                 onDragEnd={handleDragEnd}
-                                className="relative h-[300px] sm:h-[460px] cursor-grab touch-pan-y active:cursor-grabbing"
+                                className="relative h-[min(300px,45dvh)] sm:h-[min(460px,60dvh)] cursor-grab touch-pan-y active:cursor-grabbing"
                                 aria-roledescription="slide"
                                 aria-label={`${index + 1} of ${ADVERTS.length}`}
                             >
@@ -271,7 +271,7 @@ const AdPopup = () => {
                                     <h3 className="text-lg sm:text-xl font-semibold leading-tight tracking-tight">
                                         {ad.title}
                                     </h3>
-                                    <p className="mt-2 hidden text-sm text-white/75 sm:block">{ad.body}</p>
+                                    <p className="mt-2 hidden text-sm text-white/75 [@media(min-width:640px)_and_(min-height:720px)]:block">{ad.body}</p>
                                     {/* Brand links (ad.cta / ad.href) switch on once sponsors are announced */}
                                     <Button type="button" disabled className="mt-3 w-full sm:mt-4 disabled:opacity-80">
                                         Announced soon
