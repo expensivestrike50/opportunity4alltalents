@@ -54,7 +54,7 @@ const DemoProfileSettings = () => {
       breadcrumbs={[{ label: "Demo", to: "/demo/dashboard/blog" }, { label: "Profile" }]}
     >
       <Helmet>
-        <title>My Profile Demo | Opportunity 4 All Talents</title>
+        <title>My Profile Demo | Opportunity4AllTalents</title>
         <meta name="robots" content="noindex" />
       </Helmet>
 

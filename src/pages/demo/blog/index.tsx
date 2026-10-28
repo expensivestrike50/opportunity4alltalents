@@ -66,7 +66,7 @@ const DemoBlogDashboard = () => {
       breadcrumbs={[{ label: "Demo", to: "/demo/dashboard/blog" }, { label: "Blog" }]}
     >
       <Helmet>
-        <title>Blog Dashboard Demo | Opportunity 4 All Talents</title>
+        <title>Blog Dashboard Demo | Opportunity4AllTalents</title>
         <meta name="robots" content="noindex" />
       </Helmet>
 

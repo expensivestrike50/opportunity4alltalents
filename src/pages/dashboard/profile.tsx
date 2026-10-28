@@ -206,7 +206,7 @@ const ProfileSettings = () => {
             ]}
         >
             <Helmet>
-                <title>My Profile | Opportunity 4 All Talents</title>
+                <title>My Profile | Opportunity4AllTalents</title>
             </Helmet>
 
             <div className="mb-8">

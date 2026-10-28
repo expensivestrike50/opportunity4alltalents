@@ -16,7 +16,7 @@ const BrandLogo = ({ className, markClassName, textClassName }: BrandLogoProps) 
       className={cn("h-9 w-11 shrink-0 object-contain", markClassName)}
     />
     <span className={cn("whitespace-nowrap text-sm font-bold text-primary-foreground", textClassName)}>
-      Opportunity 4 All Talents
+      Opportunity4AllTalents
     </span>
   </span>
 );

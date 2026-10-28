@@ -36,7 +36,7 @@ const People = () => {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: `People | ${appConfig.name}`,
-    description: "Players represented by Opportunity 4 All Talents.",
+    description: "Players represented by Opportunity4AllTalents.",
     url: `${appConfig.url}/people`,
   };
 
@@ -44,7 +44,7 @@ const People = () => {
     <>
       <SEO
         title={`People | ${appConfig.name}`}
-        description="Meet the players represented by Opportunity 4 All Talents, connecting emerging African football talent with scouts, clubs, and opportunity."
+        description="Meet the players represented by Opportunity4AllTalents, connecting emerging African football talent with scouts, clubs, and opportunity."
         canonicalUrl="/people"
         ogType="website"
         jsonLd={jsonLd}

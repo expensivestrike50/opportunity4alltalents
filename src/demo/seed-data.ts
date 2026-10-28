@@ -109,7 +109,7 @@ const seeds: Seed[] = [
 <blockquote>Good scouting looks the same everywhere. Access to scouting is what varies.</blockquote>
 <h2>What players and coaches can do</h2>
 <p>Film full matches rather than only highlights. Note the age group, the level of opposition and the player's position. Record progress over months, not days. These simple habits turn a local performance into something a decision maker anywhere in the world can read with confidence.</p>
-<p>Opportunity 4 All Talents exists to help that information travel: from a pitch that rarely gets visitors to the people who are already asking the right questions.</p>`,
+<p>Opportunity4AllTalents exists to help that information travel: from a pitch that rarely gets visitors to the people who are already asking the right questions.</p>`,
   },
   {
     title: "The overlooked pathway: developing young goalkeepers",
@@ -178,7 +178,7 @@ const seeds: Seed[] = [
 <blockquote>The best youth partnerships make the sponsor part of the club's story rather than an advert on its shirt.</blockquote>
 <h2>They think long term</h2>
 <p>Player development takes years. Partnerships that commit across several seasons give clubs the stability to plan and give sponsors the chance to follow players as they grow, sometimes all the way to senior football.</p>
-<p>These principles apply whether a club is in a major city or a small town. They are also the foundation of every activation Opportunity 4 All Talents builds with its partners.</p>`,
+<p>These principles apply whether a club is in a major city or a small town. They are also the foundation of every activation Opportunity4AllTalents builds with its partners.</p>`,
   },
   {
     title: "University football as a pathway: how the college route works",
@@ -228,7 +228,7 @@ const seeds: Seed[] = [
 <h2>Why the story matters as much as the footage</h2>
 <p>Scouts see thousands of clips a year. Most are edited to hide weaknesses and inflate a handful of good moments. What actually earns a second look is context: how a player has developed over time, how they respond to setbacks, and whether the people around them, including coaches, family, and teammates, believe in the direction they're heading. A story that includes all of that is worth more than a highlight reel with a soundtrack.</p>
 <h2>What this means for other players like him</h2>
-<p>Emeka's path is not unique because he is exceptional. It's unique because someone took the time to document it properly. There are players on pitches just as rough as his, right now, who could use the same thing: consistent footage, an honest profile, and someone willing to make the introduction. That's the gap Opportunity 4 All Talents exists to close.</p>`,
+<p>Emeka's path is not unique because he is exceptional. It's unique because someone took the time to document it properly. There are players on pitches just as rough as his, right now, who could use the same thing: consistent footage, an honest profile, and someone willing to make the introduction. That's the gap Opportunity4AllTalents exists to close.</p>`,
   },
   {
     title: "Preparing a player profile that scouts can use",
@@ -249,7 +249,7 @@ const seeds: Seed[] = [
 <p>Cut the music. Cut the slow-motion replays of the same goal from four angles. Cut superlatives that aren't backed by anything specific. A profile that reads like an advertisement invites skepticism; a profile that reads like an honest scouting report invites trust.</p>
 <blockquote>Scouts don't need a highlight reel with a soundtrack. They need position, footage, physical context, and character: the things they can actually verify.</blockquote>
 <h2>Building this at scale</h2>
-<p>For one player, a good profile is a few hours of work. For a program trying to give dozens of players the same fair shot, it requires a repeatable process: consistent filming standards, a template for the written profile, and a coach willing to write an honest paragraph rather than a flattering one. That repeatability is what turns "a good idea" into something that actually reaches scouts on a consistent basis, and it's the backbone of how Opportunity 4 All Talents builds every player profile it sends out.</p>`,
+<p>For one player, a good profile is a few hours of work. For a program trying to give dozens of players the same fair shot, it requires a repeatable process: consistent filming standards, a template for the written profile, and a coach willing to write an honest paragraph rather than a flattering one. That repeatability is what turns "a good idea" into something that actually reaches scouts on a consistent basis, and it's the backbone of how Opportunity4AllTalents builds every player profile it sends out.</p>`,
   },
   {
     title: "What makes football footage useful to a scout",
@@ -501,7 +501,7 @@ const seeds: Seed[] = [
     author: "Priya Raman",
     date: "May 5, 2026",
     status: "published",
-    content: `<p>Sponsorship used to mean a logo on a shirt and a line in an annual report. For brands partnering with Opportunity 4 All Talents, it increasingly means something with a name attached, a measurable outcome, and a seat at the table for decisions about where the partnership actually goes next.</p>
+    content: `<p>Sponsorship used to mean a logo on a shirt and a line in an annual report. For brands partnering with Opportunity4AllTalents, it increasingly means something with a name attached, a measurable outcome, and a seat at the table for decisions about where the partnership actually goes next.</p>
 <h2>The old model and its limits</h2>
 <p>Traditional sponsorship optimizes for reach: impressions, logo placements, a mention in a press release. It's easy to measure and easy to buy, but it rarely produces a story anyone remembers past the quarter it ran in, and it gives the sponsoring brand little influence over what the money actually accomplishes.</p>
 <h2>What's replacing it</h2>

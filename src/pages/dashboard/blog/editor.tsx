@@ -261,7 +261,7 @@ const BlogEditor = () => {
   return (
     <BlogLayout breadcrumbs={breadcrumbs}>
       <Helmet>
-        <title>{isEditMode ? "Edit Post" : "Create Post"} | Opportunity 4 All Talents</title>
+        <title>{isEditMode ? "Edit Post" : "Create Post"} | Opportunity4AllTalents</title>
       </Helmet>
 
       <div className="max-w-4xl space-y-8">

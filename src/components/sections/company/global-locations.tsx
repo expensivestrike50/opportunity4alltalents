@@ -221,7 +221,7 @@ const GlobalLocations = () => {
                             />
                         )}
                         <div ref={hubRef} className="relative flex h-[140px] w-[140px] flex-col items-center justify-center gap-1 rounded-full bg-[#0f2418] shadow-[0_20px_60px_rgba(15,36,24,0.35)] ring-8 ring-[#b4e66b]">
-                            <img src={logoImage} alt="Opportunity 4 All Talents" className="h-12 w-auto" loading="lazy" />
+                            <img src={logoImage} alt="Opportunity4AllTalents" className="h-12 w-auto" loading="lazy" />
                             <span className="text-[11px] font-medium uppercase tracking-wider text-white/70">The hub</span>
                         </div>
                     </AnimateOnView>
@@ -256,7 +256,7 @@ const GlobalLocations = () => {
                         </AnimateOnView>
                         <AnimateOnView once delay={0.2} className="space-y-4">
                             <p>
-                                Opportunity 4 All Talents exists to help emerging African football talent become easier to see, understand, and support.
+                                Opportunity4AllTalents exists to help emerging African football talent become easier to see, understand, and support.
                             </p>
                             <p>
                                 We bring together player stories, football context, credible visibility, and partnership activation without making promises about trials, contracts, or selection.

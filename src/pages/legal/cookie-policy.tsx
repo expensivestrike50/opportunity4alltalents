@@ -33,7 +33,7 @@ const CookiePolicyPage = () => {
                         {/* Main Content Column */}
                         <article className="max-w-[1030px] prose prose-lg">
                             <p className="lead text-xl text-muted-foreground mb-8">
-                                Opportunity 4 All Talents connects emerging football talent with visibility, storytelling, scouts, clubs, and partnership opportunities.
+                                Opportunity4AllTalents connects emerging football talent with visibility, storytelling, scouts, clubs, and partnership opportunities.
                             </p>
 
                             <h3>The backbone of global expansion</h3>

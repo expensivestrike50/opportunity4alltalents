@@ -172,7 +172,7 @@ const DemoBlogEditor = () => {
   return (
     <DemoBlogLayout breadcrumbs={breadcrumbs}>
       <Helmet>
-        <title>{isEditMode ? "Edit Post" : "Create Post"} Demo | Opportunity 4 All Talents</title>
+        <title>{isEditMode ? "Edit Post" : "Create Post"} Demo | Opportunity4AllTalents</title>
         <meta name="robots" content="noindex" />
       </Helmet>
 

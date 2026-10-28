@@ -1,5 +1,6 @@
 import Container from "@/components/container";
 import NewsletterForm from "@/components/newsletter-form";
+import { Button } from "@/components/ui/button";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { publicUrl } from "@/lib/utils";
 import { Link } from "react-router-dom";
@@ -87,6 +88,37 @@ const Footer = () => {
                 Talent is everywhere.<br />Opportunity isn’t.
               </p>
             </div>
+
+            <div className="space-y-2.5">
+              <p className="text-white">
+                Get in touch:
+              </p>
+              <ul className="space-y-1">
+                <li>
+                  <a href="tel:+19029782818" className="text-muted hover:text-white transition-colors">
+                    +1 902 978 2818
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:hello@opportunity4alltalents.com" className="text-muted hover:text-white transition-colors break-all">
+                    hello@opportunity4alltalents.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+              <Button asChild>
+                <Link to="/contact">
+                  Become a Partner
+                </Link>
+              </Button>
+              <Button asChild variant="gray">
+                <Link to="/features">
+                  Explore Our Work
+                </Link>
+              </Button>
+            </div>
           </div>
 
           <div className="max-w-[537px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -158,7 +190,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
             <p className="text-sm text-muted-foreground text-center md:text-left">
-              © {new Date().getFullYear()} Opportunity 4 All Talents.
+              © {new Date().getFullYear()} Opportunity4AllTalents.
             </p>
 
             {/* Legal Links */}

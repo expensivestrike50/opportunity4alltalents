@@ -37,7 +37,7 @@ const SEO = ({
             <meta property="og:url" content={fullUrl} />
             <meta property="og:image" content={fullImageUrl} />
             <meta property="og:image:alt" content={title} />
-            <meta property="og:site_name" content="Opportunity 4 All Talents" />
+            <meta property="og:site_name" content="Opportunity4AllTalents" />
             <meta property="og:locale" content="en_US" />
 
             {/* Twitter Card Meta Tags */}
@@ -50,7 +50,7 @@ const SEO = ({
             
 
             {/* Additional Meta Tags */}
-            <meta name="author" content="Opportunity 4 All Talents" />
+            <meta name="author" content="Opportunity4AllTalents" />
             <meta name="robots" content="index, follow" />
             <meta name="googlebot" content="index, follow" />
 

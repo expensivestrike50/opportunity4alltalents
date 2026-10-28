@@ -78,7 +78,7 @@ export const partners: PartnerCaseStudy[] = [
     challenge:
       "Ventures wanted to support grassroots football but had no reliable way to find, verify, or follow emerging talent worth backing.",
     solution:
-      "Opportunity 4 All Talents gave Ventures direct access to verified player profiles and grassroots match footage, turning cold outreach into informed sponsorship decisions.",
+      "Opportunity4AllTalents gave Ventures direct access to verified player profiles and grassroots match footage, turning cold outreach into informed sponsorship decisions.",
     results: [
       "12 grassroots players featured in sponsored profiles",
       "3x faster path from discovery to first sponsorship conversation",
@@ -100,7 +100,7 @@ export const partners: PartnerCaseStudy[] = [
         ],
       },
     ],
-    closingQuote: "Opportunity 4 All Talents made grassroots sponsorship feel personal again.",
+    closingQuote: "Opportunity4AllTalents made grassroots sponsorship feel personal again.",
   },
   {
     slug: "david-chen",

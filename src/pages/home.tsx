@@ -14,7 +14,7 @@ const SecurityCompliance = lazy(() => import("@/components/sections/home/securit
 const Testimonials = lazy(() => import("@/components/sections/home/testimonials"));
 
 const Home = () => {
-  const metaTitle = "Opportunity 4 All Talents | African Football Talent Platform";
+  const metaTitle = "Opportunity4AllTalents | African Football Talent Platform";
   const metaDescription = "Connecting emerging African football talent with global visibility, scouts, clubs, sponsors, and opportunity.";
   const jsonLd = {
     "@context": "https://schema.org",

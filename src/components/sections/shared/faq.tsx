@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 const faqs = [
   {
-    question: "What is Opportunity 4 All Talents?",
-    answer: "Opportunity 4 All Talents is a partnership platform connecting emerging African football talent with global visibility, scouts, clubs, brands, and opportunity.",
+    question: "What is Opportunity4AllTalents?",
+    answer: "Opportunity4AllTalents is a partnership platform connecting emerging African football talent with global visibility, scouts, clubs, brands, and opportunity.",
   },
   {
     question: "How can a player be considered?",

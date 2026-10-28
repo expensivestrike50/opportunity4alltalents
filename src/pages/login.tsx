@@ -63,7 +63,7 @@ const Login = () => {
     return (
         <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-4">
             <Helmet>
-                <title>Sign In | Opportunity 4 All Talents</title>
+                <title>Sign In | Opportunity4AllTalents</title>
             </Helmet>
 
             <div className="w-full max-w-[400px] space-y-8">

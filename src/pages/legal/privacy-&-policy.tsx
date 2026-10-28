@@ -26,14 +26,14 @@ const PrivacyPolicyPage = () => {
             <Layout>
                 <LegalHero
                     title={`Privacy & Policy`}
-                    description={`Privacy & Policy | Opportunity 4 All Talents - Legal`}
+                    description={`Privacy & Policy | Opportunity4AllTalents - Legal`}
                 />
                 <section>
                     <Container className="flex flex-col lg:flex-row justify-center md:gap-10 gap-6 py-[60px]">
                         {/* Main Content Column */}
                         <article className="max-w-[1030px] prose prose-lg">
                             <p className="lead text-xl text-muted-foreground mb-8">
-                                Opportunity 4 All Talents connects emerging football talent with visibility, storytelling, scouts, clubs, and partnership opportunities.
+                                Opportunity4AllTalents connects emerging football talent with visibility, storytelling, scouts, clubs, and partnership opportunities.
                             </p>
 
                             <h3>The backbone of global expansion</h3>

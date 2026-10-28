@@ -106,7 +106,7 @@ const Navbar = () => {
           : "border-b border-transparent pt-6 md:pt-10"
       )}>
       <Container className="flex items-center justify-between gap-6 xl:grid xl:grid-cols-[minmax(210px,1fr)_auto_minmax(210px,1fr)]">
-        <Link to="/" className="flex w-fit items-center" aria-label="Opportunity 4 All Talents home">
+        <Link to="/" className="flex w-fit items-center" aria-label="Opportunity4AllTalents home">
           <BrandLogo textClassName="text-[13px] 2xl:text-sm" />
         </Link>
 

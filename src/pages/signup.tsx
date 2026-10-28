@@ -64,7 +64,7 @@ const SignUp = () => {
     return (
         <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-4">
             <Helmet>
-                <title>Create Account | Opportunity 4 All Talents</title>
+                <title>Create Account | Opportunity4AllTalents</title>
             </Helmet>
 
             <div className="w-full max-w-[400px] space-y-8">
