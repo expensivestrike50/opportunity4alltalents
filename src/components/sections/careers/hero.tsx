@@ -1,5 +1,4 @@
 import Container from "@/components/container";
-import { Button } from "@/components/ui/button";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
 
@@ -15,14 +14,9 @@ const CareersHero = () => {
 
         <StaggerContainer className="flex flex-col items-center gap-6 text-center">
           <AnimateOnView delay={0.3}>
-            <p className="max-w-[560px] text-lg text-white/70">
+            <p className="text-lg text-white/70 text-balance lg:whitespace-nowrap">
               Join a team connecting emerging footballers with scouts, clubs, and partners around the world.
             </p>
-          </AnimateOnView>
-          <AnimateOnView delay={0.4}>
-            <Button asChild>
-              <a href="#open-roles">View Open Roles</a>
-            </Button>
           </AnimateOnView>
         </StaggerContainer>
       </Container>
