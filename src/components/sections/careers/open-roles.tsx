@@ -141,16 +141,16 @@ const OpenRoles = () => {
   return (
     <section className="md:pt-20 xl:pt-32 pt-12 md:pb-20 xl:pb-32 pb-12 scroll-mt-24" id="open-roles">
       <Container className="md:space-y-10 xl:space-y-2xl space-y-8">
-        <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between md:gap-8 gap-4">
-          <StaggerContainer className="max-w-[683px]">
+        <div className="flex flex-col xl:flex-row items-start xl:items-end justify-between md:gap-8 gap-4">
+          <StaggerContainer>
             <AnimateOnView once blur className="flex items-center gap-2 md:mb-4 mb-1.5">
               <Badge>
                 Open Roles
               </Badge>
             </AnimateOnView>
             <AnimateOnView once blur delay={0.1}>
-              <h2 className="h2">
-                Find your place<br className="hidden sm:block" /> on the team
+              <h2 className="h2 text-balance lg:whitespace-nowrap">
+                Find your place on the team
               </h2>
             </AnimateOnView>
           </StaggerContainer>
