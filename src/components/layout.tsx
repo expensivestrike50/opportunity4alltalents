@@ -5,6 +5,7 @@ import AdPopup from './ad-popup'
 import CTA from './sections/shared/cta'
 import Footer from './sections/shared/footer'
 import Navbar from './sections/shared/navbar'
+import SdgGoals from './sections/shared/sdg-goals'
 import SubscribePopup from './subscribe-popup'
 
 interface LayoutProps {
@@ -29,6 +30,7 @@ const Layout = ({ children, className, ...props }: LayoutProps) => {
             <ScrollToTop />
             <Navbar />
             {children}
+            <SdgGoals />
             <CTA />
             <Footer />
             <AdPopup />

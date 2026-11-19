@@ -100,9 +100,9 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:hello@opportunity4alltalents.com" className="text-muted hover:text-white transition-colors break-all">
-                    hello@opportunity4alltalents.com
-                  </a>
+                  <Link to="/contact" className="text-muted hover:text-white transition-colors">
+                    Send us a message
+                  </Link>
                 </li>
               </ul>
             </div>

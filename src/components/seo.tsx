@@ -19,7 +19,7 @@ const SEO = ({
     twitterCard = "summary_large_image",
     jsonLd,
 }: SEOProps) => {
-    const siteUrl = "https://opportunity4alltalents.com";
+    const siteUrl = "https://www.opportunity4alltalents.com";
     const fullUrl = `${siteUrl}${canonicalUrl}`;
     const fullImageUrl = ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`;
 

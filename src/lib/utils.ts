@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 /**
  * Resolves a root-relative path (e.g. "/images/foo.svg") against Vite's
  * configured base path, so public assets still load when the app is hosted
- * under a subpath (e.g. GitHub Pages' /opportunity4alltalents/).
+ * under a subpath.
  */
 export function publicUrl(path: string) {
   return `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;

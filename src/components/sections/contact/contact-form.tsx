@@ -18,6 +18,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwlobynv";
+
 const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 
 const contactFormSchema = z.object({
@@ -42,6 +44,7 @@ const ContactForm = () => {
   const [searchParams] = useSearchParams();
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -56,9 +59,35 @@ const ContactForm = () => {
 
   const onSubmit = async (data: ContactFormValues) => {
     try {
+      // Honeypot: real visitors never see or fill this field, so bots that do are silently dropped.
+      if (honeypot) {
+        form.reset();
+        setIsSuccess(true);
+        return;
+      }
 
-      // Simulate API call delay
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: `${data.firstName} ${data.lastName}`,
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          phone: data.phone || "",
+          subject: data.subject,
+          message: data.message,
+          _subject: `Website enquiry: ${data.subject}`,
+          _replyto: data.email,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Formspree responded with ${response.status}`);
+      }
 
       // Show success toast
       toast({
@@ -84,7 +113,7 @@ const ContactForm = () => {
       // Show error toast
       toast({
         title: "Failed to send message",
-        description: "Please try again later or contact us directly.",
+        description: "Please try again in a moment.",
         variant: "destructive",
       });
       
@@ -230,6 +259,18 @@ const ContactForm = () => {
               )}
             />
 
+            {/* Spam honeypot, hidden from people and screen readers */}
+            <input
+              type="text"
+              name="_gotcha"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="hidden"
+            />
+
             {/* Submit Button */}
             <div className="flex flex-col items-center w-full">
               <Button
@@ -237,7 +278,7 @@ const ContactForm = () => {
                 className="bg-primary text-white hover:bg-primary/90 w-full"
                 disabled={form.formState.isSubmitting}
               >
-                Send a Message
+                {form.formState.isSubmitting ? "Sending..." : "Send a Message"}
               </Button>
               <p 
                 className={cn(
