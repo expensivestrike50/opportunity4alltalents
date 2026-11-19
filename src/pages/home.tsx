@@ -10,6 +10,7 @@ const Blog = lazy(() => import("@/components/sections/home/blog"));
 const CoreFeatures = lazy(() => import("@/components/sections/home/core-features"));
 const Integrations = lazy(() => import("@/components/sections/home/integrations"));
 const Podcasts = lazy(() => import("@/components/sections/home/podcasts"));
+const SdgGoals = lazy(() => import("@/components/sections/shared/sdg-goals"));
 const SecurityCompliance = lazy(() => import("@/components/sections/home/security-compliance"));
 const Testimonials = lazy(() => import("@/components/sections/home/testimonials"));
 
@@ -72,6 +73,9 @@ const Home = () => {
         </Suspense>
         <Suspense fallback={null}>
           <Podcasts />
+        </Suspense>
+        <Suspense fallback={null}>
+          <SdgGoals />
         </Suspense>
       </Layout>
     </>

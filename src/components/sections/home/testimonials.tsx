@@ -33,7 +33,7 @@ const Testimonials = () => {
       <Container className="md:space-y-10 xl:space-y-2xl space-y-8">
         {/* Section Header */}
         <StaggerContainer
-          className="max-w-[683px]"
+          className="max-w-[683px] md:max-w-none"
         >
           <AnimateOnView
             once
@@ -48,8 +48,10 @@ const Testimonials = () => {
             blur
             delay={0.1}
           >
-            <h2 className="h3">
-              Built for people who believe football talent deserves a fair chance to be seen.
+            <h2 className="h3 md:whitespace-nowrap md:text-[min(44px,calc((100vw-80px)/17.8))]">
+              Built for people who believe football talent
+              <br className="hidden md:block" />{" "}
+              deserves a fair chance to be seen.
             </h2>
           </AnimateOnView>
         </StaggerContainer>

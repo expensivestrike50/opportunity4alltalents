@@ -42,17 +42,17 @@ const SdgGoals = () => {
     return (
         <section className="md:pt-20 xl:pt-32 pt-12 md:pb-20 xl:pb-32 pb-12">
             <Container className="md:space-y-10 xl:space-y-2xl space-y-8">
-                <StaggerContainer className="max-w-[760px]">
+                <StaggerContainer>
                     <AnimateOnView once blur className="flex items-center gap-2 md:mb-4 mb-1.5">
                         <Badge>Our Impact</Badge>
                     </AnimateOnView>
                     <AnimateOnView once blur delay={0.1}>
-                        <h2 className="h2 text-balance mb-4">
+                        <h2 className="h2 text-balance lg:whitespace-nowrap lg:text-[min(56px,calc((100vw-80px)/22.5))] mb-4">
                             Supporting the UN Sustainable Development Goals
                         </h2>
                     </AnimateOnView>
                     <AnimateOnView once blur delay={0.15}>
-                        <p className="text-lg">
+                        <p className="text-lg max-w-[760px]">
                             Sport is a powerful enabler of sustainable development. Our work to open football
                             pathways for every young player, especially girls and women, supports four of the
                             UN&rsquo;s global goals.
