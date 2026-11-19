@@ -47,37 +47,30 @@ const SdgGoals = () => {
                         <Badge>Our Impact</Badge>
                     </AnimateOnView>
                     <AnimateOnView once blur delay={0.1}>
-                        <h2 className="h2 text-balance lg:whitespace-nowrap lg:text-[min(56px,calc((100vw-80px)/22.5))] mb-4">
+                        <h2 className="h2 text-balance lg:whitespace-nowrap lg:text-[min(56px,calc((100vw-80px)/22.5))]">
                             Supporting the UN Sustainable Development Goals
                         </h2>
                     </AnimateOnView>
-                    <AnimateOnView once blur delay={0.15}>
-                        <p className="text-lg max-w-[760px]">
-                            Sport is a powerful enabler of sustainable development. Our work to open football
-                            pathways for every young player, especially girls and women, supports four of the
-                            UN&rsquo;s global goals.
-                        </p>
-                    </AnimateOnView>
                 </StaggerContainer>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {/* Subgrid keeps icons, titles and descriptions aligned across cards,
+                    even when a title wraps onto more lines than its neighbours. */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-0">
                     {goals.map((goal, index) => (
-                        <AnimateOnView key={goal.number} once y={30} delay={0.2 + index * 0.08} className="h-full">
-                            <Card className="h-full rounded-3xl flex flex-col gap-6 hover:shadow-lg transition-shadow">
+                        <AnimateOnView key={goal.number} once y={30} delay={0.2 + index * 0.08} className="row-span-3 grid grid-rows-subgrid gap-y-0 mb-4">
+                            <Card className="row-span-3 grid grid-rows-subgrid gap-y-0 rounded-3xl hover:shadow-lg transition-shadow">
                                 <img
                                     src={publicUrl(goal.icon)}
                                     alt={`UN Sustainable Development Goal ${goal.number}: ${goal.title}`}
                                     width={400}
                                     height={400}
                                     loading="lazy"
-                                    className="w-28 h-28 md:w-32 md:h-32 rounded-lg"
+                                    className="w-28 h-28 md:w-32 md:h-32 rounded-lg mb-6"
                                 />
-                                <div>
-                                    <h3 className="h5 text-foreground mb-2">
-                                        SDG {goal.number}: {goal.title}
-                                    </h3>
-                                    <p className="card-foreground">{goal.description}</p>
-                                </div>
+                                <h3 className="h5 text-foreground mb-2">
+                                    SDG {goal.number}: {goal.title}
+                                </h3>
+                                <p className="card-foreground">{goal.description}</p>
                             </Card>
                         </AnimateOnView>
                     ))}

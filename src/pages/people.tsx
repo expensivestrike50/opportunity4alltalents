@@ -149,7 +149,8 @@ const People = () => {
                         src={person.image}
                         alt={person.name}
                         loading="lazy"
-                        className="w-full h-full object-cover"
+                        draggable={false}
+                        className="w-full h-full object-cover blur-lg scale-110 select-none pointer-events-none"
                       />
                     </div>
                     <div className="h-px w-8 bg-primary mb-3" />
