@@ -121,20 +121,6 @@ export const people: Person[] = [
     position: "Defender",
     image: "https://images.unsplash.com/photo-1748112200749-2383a55bae73?q=80&w=800&auto=format&fit=crop",
   },
-  {
-    id: 17,
-    name: "Zanele Dube",
-    location: "Durban, South Africa",
-    position: "Goalkeeper",
-    image: "https://images.unsplash.com/photo-1604887010036-19d7b0c338f7?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    id: 18,
-    name: "Chidinma Eze",
-    location: "Enugu, Nigeria",
-    position: "Forward",
-    image: "https://images.unsplash.com/photo-1646743933539-3359aa13d373?q=80&w=800&auto=format&fit=crop",
-  },
 ];
 
 export const positions: Position[] = ["Forward", "Midfielder", "Defender", "Goalkeeper"];
